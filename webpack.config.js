@@ -40,7 +40,7 @@ module.exports = (env = {}) => {
             loader: 'babel-loader',
             options: {
               cacheDirectory: true,
-              presets: ['react', 'env']
+              presets: ['react', 'env', "es2015", "stage-0"]
             }
           }
         },
@@ -55,7 +55,7 @@ module.exports = (env = {}) => {
             use: [
               {
                 loader: 'css-loader',
-                options: {alias: {'../img': '../public/img'}}
+                options: {alias: {'../img': '../public/img'}, url: false}
               },
               {
                 loader: 'sass-loader'
@@ -71,7 +71,7 @@ module.exports = (env = {}) => {
           })
         },
         {
-          test: /\.(png|jpg|jpeg|gif|ico)$/,
+          test: /\.svg$/,
           use: [
             {
               // loader: 'url-loader'
@@ -81,6 +81,10 @@ module.exports = (env = {}) => {
               }
             }
           ]
+        },
+        {
+          test: /\.(png|jpg)$/,
+          loader: 'url-loader'
         },
         {
           test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,

@@ -1,4 +1,3 @@
-'use strict';
 
 //////////////////////////////////////////////////////////////////////////
 /////////////////  Component Renders List of Contacts  //////////////////
@@ -57,7 +56,7 @@ class ListContacts extends Component {
             onChange = { (event) => this.updateQuery(event.target.value)}
           />
         <Link
-          to="/create"
+          to="/members/createcontacts"
           className = "add-contact"
         >Add Contact</Link>
 

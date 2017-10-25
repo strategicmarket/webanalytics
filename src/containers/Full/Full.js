@@ -10,6 +10,10 @@ import Dashboard from '../../views/Dashboard/';
 import Charts from '../../views/Charts/';
 import Widgets from '../../views/Widgets/';
 
+// list Contacts
+import Contacts from '../../views/Members/ListContacts/';
+import CreateContacts from '../../views/Members/CreateContacts/';
+
 // Components
 import Buttons from '../../views/Components/Buttons/';
 import Cards from '../../views/Components/Cards/';
@@ -54,6 +58,8 @@ class Full extends Component {
             <Container fluid>
               <Switch>
                 <Route path="/dashboard" name="Dashboard" component={Dashboard}/>
+                <Route path="/members/listcontacts" name="List Contacts" component={Contacts}/>
+                <Route path="/members/createcontacts" name="Create Contacts" component={CreateContacts}/>
                 <Route path="/components/buttons" name="Buttons" component={Buttons}/>
                 <Route path="/components/cards" name="Cards" component={Cards}/>
                 <Route path="/components/modals" name="Modals" component={Modals}/>

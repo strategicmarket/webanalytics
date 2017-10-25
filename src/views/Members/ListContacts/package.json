@@ -1,6 +1,6 @@
 {
-  "name": "ListContacts",
+  "name": "Contacts",
   "version": "1.0.1",
   "private": true,
-  "main": "./ListContacts.js"
+  "main": "./Contacts.js"
 }

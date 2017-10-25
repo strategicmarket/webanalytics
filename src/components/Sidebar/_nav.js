@@ -25,12 +25,12 @@ export default {
       children: [
         {
           name: 'Create Contacts',
-          url: '/components/createcontacts',
+          url: '/members/createcontacts',
           icon: 'icon-user-following'
         },
         {
           name: 'List Contacts',
-          url: '/components/listcontacts',
+          url: '/members/listcontacts',
           icon: 'icon-book-open'
         }
       ]

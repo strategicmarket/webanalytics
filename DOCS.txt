@@ -31,3 +31,10 @@ docs
 
 https://github.com/mrholek/CoreUI-React/tree/master/React_Starter
 https://github.com/mrholek/CoreUI-React/tree/master/React_Full_Project
+
+---------------------------------
+
+info on react-router-dom and history object
+
+https://medium.com/@pshrmn/a-simple-react-router-v4-tutorial-7f23ff27adf
+https://medium.com/@pshrmn/a-little-bit-of-history-f245306f48dd
