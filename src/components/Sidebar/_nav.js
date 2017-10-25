@@ -19,6 +19,23 @@ export default {
       class: ''             // optional class names space delimited list for title item ex: "text-center"
     },
     {
+      name: 'Members',
+      url: '/members',
+      icon: 'icon-people',
+      children: [
+        {
+          name: 'Create Contacts',
+          url: '/components/createcontacts',
+          icon: 'icon-user-following'
+        },
+        {
+          name: 'List Contacts',
+          url: '/components/listcontacts',
+          icon: 'icon-book-open'
+        }
+      ]
+    },
+    {
       name: 'Components',
       url: '/components',
       icon: 'icon-puzzle',
