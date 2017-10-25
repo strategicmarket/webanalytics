@@ -1,0 +1,33 @@
+
+
+--------------------------------
+
+TUTORIAL 
+
+integrating create=react=app with an api server
+
+https://www.fullstackreact.com/articles/using-create-react-app-with-a-server/
+
+The create-react-app project aims to provide a canonical manner for initiating a new React app for those that want the benefits of a more complex setup but don't want to deal with the configuration
+
+> shows how to run webpack dev server as a proxy server to backend api server
+
+> use of concurrently to boot multiple servers concurrently using json package scripts
+
+inside client/package.json
+
+"proxy": "http://localhost:3001/",
+
+> for production either use run build -- or you can have the api server deploy the static assets. This tutorial has a github repo example of an app prepared for deployment
+https://github.com/fullstackreact/food-lookup-demo#deploying
+
+repo
+https://github.com/fullstackreact/food-lookup-demo
+
+--------------------------------
+
+
+docs
+
+https://github.com/mrholek/CoreUI-React/tree/master/React_Starter
+https://github.com/mrholek/CoreUI-React/tree/master/React_Full_Project
