@@ -64,7 +64,7 @@ class Contacts extends Component {
           <CreateContact
             onCreateContact={ (contact) => {
               this.createContact(contact)
-              history.push('/')
+              history.push('/members/contacts')
             }}
             />
           )} />
