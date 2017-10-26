@@ -24,13 +24,8 @@ export default {
       icon: 'icon-people',
       children: [
         {
-          name: 'Create Contacts',
-          url: '/members/createcontacts',
-          icon: 'icon-user-following'
-        },
-        {
-          name: 'List Contacts',
-          url: '/members/listcontacts',
+          name: 'Contacts',
+          url: '/members/contacts',
           icon: 'icon-book-open'
         }
       ]

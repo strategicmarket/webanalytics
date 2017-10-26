@@ -53,7 +53,7 @@ class Contacts extends Component {
   render() {
     return (
       <div className = 'app'>
-        <Route exact path ="/members/listcontacts" render={() => (
+        <Route exact path ="/members/contacts" render={() => (
           <ListContacts
             onDeleteContact = { this.removeContact }
             contacts={this.state.contacts}
