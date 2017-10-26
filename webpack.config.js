@@ -55,7 +55,7 @@ module.exports = (env = {}) => {
             use: [
               {
                 loader: 'css-loader',
-                options: {alias: {'../img': '../public/img'}, url: false}
+                options: {alias: {'../img': '../public/img'}}
               },
               {
                 loader: 'sass-loader'
@@ -82,8 +82,20 @@ module.exports = (env = {}) => {
             }
           ]
         },
+        /*
         {
-          test: /\.(png|jpg)$/,
+          test: /\.svg$/,
+          use: [
+            {
+              // loader: 'url-loader'
+              loader: 'svg-url-loader',
+              options: { }
+            }
+          ]
+        },
+        */
+        {
+          test: /\.(png|jpg|svg)$/,
           loader: 'url-loader'
         },
         {

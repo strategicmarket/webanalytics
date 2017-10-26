@@ -12,6 +12,7 @@ import Widgets from '../../views/Widgets/';
 
 // list and Create Contacts
 import Contacts from '../../views/Members/Contacts/';
+import CreateContact from '../../views/Members/CreateContact/CreateContact.js';
 
 // Components
 import Buttons from '../../views/Components/Buttons/';
@@ -58,6 +59,7 @@ class Full extends Component {
               <Switch>
                 <Route path="/dashboard" name="Dashboard" component={Dashboard}/>
                 <Route path="/members/contacts" name="Contacts" component={Contacts}/>
+                <Route path="/members/createcontacts" name=" Create Contact" component={CreateContact}/>
                 <Route path="/components/buttons" name="Buttons" component={Buttons}/>
                 <Route path="/components/cards" name="Cards" component={Cards}/>
                 <Route path="/components/modals" name="Modals" component={Modals}/>

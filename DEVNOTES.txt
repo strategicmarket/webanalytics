@@ -1,0 +1,30 @@
+
+
+
+DEV NOTES
+--------------------------
+
+
+1. need to fix webpack loading of svg. Go to the views/members project and note that the svg images loaded via from url in css does not work. Webpack fails to compile the project with proper relative address
+
+Note this was suggested as potential solutions
+https://www.npmjs.com/package/resolve-url-loader
+
+As a workaround -- 
+  
+> following code embedded in the reactjs apps
+
+var image1 = "http://localhost:5001/delete.png"
+style={{  backgroundImage: `url(${image1})`   }} 
+
+> images fetched from contactsrv -- not as fast as loading from local storage obviously
+
+> also note we are loading svg from members/contacts/img -- not png or jpg file -- with
+
+background-image: url('../img/person-add.svg')
+
+.... but unable to make it work with webpack
+
+-----------------------------------------
+
+2. 

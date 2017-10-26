@@ -18,12 +18,11 @@ body, .app {
 }
 
 /* CreateContact */
-
+/* removed arraow-back.svg on background-image property -- and moved to reactjs as png */
 .close-create-contact {
   display: block;
   width: 60px;
-  height: 60px;
-  background-image: url('../icons/arrow-back.svg');
+  height: 60px;  
   background-position: center;
   background-repeat: no-repeat;
   background-size: 30px;
@@ -40,12 +39,11 @@ body, .app {
 .create-contact-details {
   margin-left: 20px;
 }
-
+/* removed person.svg on background-image property -- and moved to reactjs as png */
 .create-contact-avatar-input {
   min-width: 60px;
   height: 60px;
   background-color: white;
-  background-image: url('../icons/person.svg');
   background-size: 32px 32px;
   background-position: center;
   background-repeat: no-repeat;
@@ -77,20 +75,20 @@ body, .app {
 /* ListContacts */
 
 .list-contacts {
-  padding-top: 60px;
+  padding-top: 20px;
 }
 .list-contacts-top {
-  position: fixed;
+  position: relative;
   width: 100%;
   top: 0;
   border-bottom: 1px solid #d5d8df;
   display: flex;
 }
 
+/* removed search.svg on background-image property -- and moved to reactjs as png */
 .search-contacts {
   width: 100%;
   padding: 20px 20px 20px 60px;
-  background-image: url('../icons/search.svg');
   background-repeat: no-repeat;
   background-position: 20px center;
   background-size: 1.2em;
@@ -98,12 +96,11 @@ body, .app {
   border: 0;
   outline: none;
 }
-
+/* removed person-add.svg on background-image property -- and moved to reactjs as png */
 .add-contact {
   display: block;
   width: 73px;
   background: white;
-  background-image: url('../icons/person-add.svg');
   background-repeat: no-repeat;
   background-position: center;
   background-size: 28px;
@@ -170,14 +167,13 @@ body, .app {
   overflow: hidden;
   text-overflow: ellipsis;
 }
-
+/* removed cancel.svg on background-image property -- and moved to reactjs as png */
 .contact-remove {
   padding-left: 20px;
   align-self: center;
   width: 32px;
   height: 32px;
   background-color: transparent;
-  background-image: url('../icons/cancel.svg');
   background-size: 100% 100%;
   border: 0;
   color: black;

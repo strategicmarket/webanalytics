@@ -10,6 +10,12 @@ import PropTypes              from 'prop-types'
 import escapeRegExp           from 'escape-string-regexp'
 import sortBy                 from 'sort-by'
 
+// refactor this -- need to handle this inside of url of css --
+// but having trouble with webpack loading 'url' in correct relative
+var image1 = "http://localhost:5001/delete.png"
+var image2 = "http://localhost:5001/search.png"
+var image3 = "http://localhost:5001/person.png"
+
 class ListContacts extends Component {
 
   static propTypes = {
@@ -50,6 +56,9 @@ class ListContacts extends Component {
         <div className = 'list-contacts-top'>
           <input
             className = 'search-contacts'
+            style={{
+                backgroundImage: `url(${image2})`
+              }}
             type='text'
             placeholder = 'Search contacts'
             value={this.state.query}
@@ -58,6 +67,9 @@ class ListContacts extends Component {
         <Link
           to="/members/createcontacts"
           className = "add-contact"
+          style={{
+              backgroundImage: `url(${image3})`
+            }}
         >Add Contact</Link>
 
       </div>
@@ -83,7 +95,9 @@ class ListContacts extends Component {
                 <p>{contact.email}</p>
               </div>
 
-             <button  onClick={()=>onDeleteContact(contact)} className='contact-remove' >
+             <button  onClick={()=>onDeleteContact(contact)} className='contact-remove' style={{
+                 backgroundImage: `url(${image1})`
+               }} >
               Remove
              </button>
 

@@ -9,9 +9,9 @@
 import React, { Component }   from 'react';
 import ListContacts           from './ListContacts';
 import * as ContactsAPI       from './utils/ContactsAPI'
-import CreateContact          from './CreateContacts'
+import CreateContact          from '../CreateContact/CreateContact'
 import { Route }              from 'react-router-dom'
-import './css/style.css'
+import '../css/style.css'
 
 // note lifecycle method to load all contacts when mounted
 
