@@ -1,3 +1,9 @@
+
+//////////////////////////////////////////////////////////////////////////
+///////////   General Utility for Managing Contacts     //////////////////
+///////////              on the Contact Server           ////////////////
+////////////////////////////////////////////////////////////////////////
+
 const api = process.env.REACT_APP_CONTACTS_API_URL || 'http://localhost:5001'
 
 let token = localStorage.token
@@ -29,3 +35,19 @@ export const create = (body) =>
     },
     body: JSON.stringify(body)
   }).then(res => res.json())
+
+//////////////generalized api calls ////////////////////
+
+export const post = (param) => {
+
+  let path = param.path
+  let body = param.body
+  fetch(`${api}/${path}`, {
+    method: 'POST',
+    headers: {
+      ...headers,
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(body)
+  }).then(res => res.json())
+}
