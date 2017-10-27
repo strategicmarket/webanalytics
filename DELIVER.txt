@@ -31,3 +31,6 @@ includes naming and passing parms function to function
 --------
 
 5 must be highly discplined in project structure and use of folders -- note in member project how apps isolated to same folders which have integrated functions
+-------
+
+6. Note the relationshop between src/route.js, src/components/Breadcrumb and src/containers/Full -- Breadsrumbs is a strapreact component that appears to be a way of setting up 'hot links' in the dynamic library
