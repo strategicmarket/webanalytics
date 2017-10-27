@@ -34,3 +34,5 @@ includes naming and passing parms function to function
 -------
 
 6. Note the relationshop between src/route.js, src/components/Breadcrumb and src/containers/Full -- Breadsrumbs is a strapreact component that appears to be a way of setting up 'hot links' in the dynamic library
+
+----------------
