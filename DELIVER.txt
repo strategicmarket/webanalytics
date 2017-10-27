@@ -41,3 +41,5 @@ includes naming and passing parms function to function
 Breadcrumbs is a strapreact component that appears to be a way of setting up 'hot links' in the dynamic library
 
 ----------------
+
+7 workflow -- integrating a new component

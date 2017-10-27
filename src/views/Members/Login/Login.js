@@ -22,9 +22,10 @@ class Login extends Component {
           "email":this.state.username,
           "password":this.state.password
         }
-        axios.post(apiBaseUrl+'login', payload)
+        api.post('login', payload)
           .then(function (response) {
             console.log(response);
+            /*
             if(response.data.code == 200){
               console.log("Login successfull");
               var uploadScreen=[];
@@ -39,6 +40,7 @@ class Login extends Component {
               console.log("Username does not exists");
               alert("Username does not exist");
             }
+          */
           })
           .catch(function (error) {
             console.log(error);
