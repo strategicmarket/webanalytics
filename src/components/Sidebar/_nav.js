@@ -1,7 +1,14 @@
 export default {
   items: [
     {
-      name: 'Dashboard',
+      divider: true
+    },
+    {
+      title: true,
+      name: 'Company Dashboard  '
+    },
+    {
+      name: 'Analytics',
       url: '/dashboard',
       icon: 'icon-speedometer',
       badge: {
@@ -10,25 +17,28 @@ export default {
       }
     },
     {
+      name: 'Platform Registration',
+      url: '/members',
+      icon: 'icon-people',
+      children: [
+        {
+          name: 'Agents',
+          url: '/members/contacts',
+          icon: 'icon-book-open'
+        }
+      ]
+    },
+    {
+      divider: true
+    },
+    {
       title: true,
-      name: 'UI elements',
+      name: 'Developer Artifacts',
       wrapper: {            // optional wrapper object
         element: 'span',      // required valid HTML5 element tag
         attributes: {}        // optional valid JS object with JS API naming ex: { className: "my-class", style: { fontFamily: "Verdana" }, id: "my-id"}
       },
       class: ''             // optional class names space delimited list for title item ex: "text-center"
-    },
-    {
-      name: 'Members',
-      url: '/members',
-      icon: 'icon-people',
-      children: [
-        {
-          name: 'Contacts',
-          url: '/members/contacts',
-          icon: 'icon-book-open'
-        }
-      ]
     },
     {
       name: 'Components',
