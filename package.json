@@ -29,6 +29,10 @@
     "webpack-dev-server": "^2.9.1"
   },
   "dependencies": {
+    "body-parser": "^1.17.1",
+    "clone": "^2.1.1",
+    "cors": "^2.8.3",
+    "express": "^4.15.2",
     "bootstrap": "^4.0.0-beta",
     "chart.js": "2.7.0",
     "codemirror": "^5.30.0",
@@ -55,8 +59,9 @@
     "spinkit": "^1.2.5"
   },
   "scripts": {
-    "dev": "webpack -d --progress --watch --profile --json > compilation-stats.json --env.dev",
-    "start": "webpack-dev-server --progress --colors --inline --env.dev",
+    "start": "npm-run-all --parallel server:start client:start",
+    "client:start": "webpack-dev-server --progress --colors --inline --env.dev",
+    "server:start": "node server.js",
     "build": "webpack -p --progress --env.prod",
     "clean": "rimraf ./build"
   },
