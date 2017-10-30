@@ -12,9 +12,9 @@ import sortBy                 from 'sort-by'
 
 // refactor this -- need to handle this inside of url of css --
 // but having trouble with webpack loading 'url' in correct relative
-var image1 = "http://localhost:5001/delete.png"
-var image2 = "http://localhost:5001/search.png"
-var image3 = "http://localhost:5001/person.png"
+var image1 = "http://localhost:3001/delete.png"
+var image2 = "http://localhost:3001/search.png"
+var image3 = "http://localhost:3001/person.png"
 
 class ListContacts extends Component {
 

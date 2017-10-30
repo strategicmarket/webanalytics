@@ -4,7 +4,7 @@
 ///////////              on the Contact Server           ////////////////
 ////////////////////////////////////////////////////////////////////////
 
-const api = process.env.REACT_APP_CONTACTS_API_URL || 'http://localhost:5001'
+const api = process.env.REACT_APP_CONTACTS_API_URL || 'http://localhost:3001'
 
 let token = localStorage.token
 
