@@ -1,7 +1,7 @@
 
 ## ChaoticDash
 
-A frontend web application for managing a variety of key data stores for the xio messaging platform
+A fullstack web application for managing a variety of key data stores for the xio messaging platform
 
 The portal to the conversational economy
 
@@ -17,6 +17,9 @@ Getting the app running on your local machine takes only a few steps:
 2. install its dependencies - `npm install`
 3. start the app - npm run start
 
+This will start the webpack server for the frontend and nodejs for the db store on the back end
+
+The code base is isomorphic, with key configuration data shared between client and server functions
 
 ## License and Use
  [LICENSE](.github/LICENSE.txt).

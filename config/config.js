@@ -6,3 +6,6 @@
 
 exports.port = process.env.PORT || 3001
 exports.origin = process.env.ORIGIN || `http://localhost:${exports.port}`
+
+// png images used in views/members/contacts/listcontacts and createcontacts
+exports.delete = `${exports.orgin}` + "/delete.png"
