@@ -29,35 +29,6 @@ background-image: url('../img/person-add.svg')
 
 2. work on members login -- really a test on the speed of development ---
 
-backend tutorial
-http://technoetics.in/handling-user-login-registration-using-nodejs-mysql/
-
-front end with react
-http://technoetics.in/handling-user-login-registration-using-nodejs-mysql/
-
-still struggling with workflow -- and how login status persists based on role
-
-uaing auth0
-https://github.com/auth0-samples/auth0-react-samples/tree/embedded-login
-
-fir a test conducted with auth0
-domain: xio.auth0.com
-clientid: lucJJx21Ghg5DIxC8ENnODy92lbsOfge
-clientsecret GFIbEKu-hZBnDahFtiU6SCdffGtA9HAd-8Q5tNHZA6jl0ZHO2bNTPl-0xcpPx4MK
-
-change the logo on the lock for web
-logo {String}
-
-The value for logo is an URL for an image that will be placed in the Lock's header, and defaults to Auth0's logo. It has a recommended max height of 58px for a better user experience.
-
-var options = {
-  theme: {
-    logo: 'https://example.com/logo.png'
-  }
-};
-
-using placeholder url to test swap out of logo using the hosted page
-http://via.placeholder.com/350x150
 
 ----------------------------
 

@@ -15,7 +15,7 @@ So given that, each 'micro app' is instantiated through the views tre structure
 
 The microapp is integrated into the dashboard by
 
-1. updating src/components/sidebar _nav.js with the route. Note this file is am object which permits dynamic configuration of the sidebar menu options, sub options, icons, titles and url path that is triggered
+1. updating src/components/sidebar _nav.js with the route. Note this file is an object which permits dynamic configuration of the sidebar menu options, sub options, icons, titles and url path that is triggered
 
 2. updating containers/fill/full.js -- Note that this is the reactjs paths within route. The path (as specified in sidebar) is activated, triggering the associated component. The component is imported from the folder of the micro app
 
@@ -38,7 +38,7 @@ includes naming and passing parms function to function
 -src/components/Breadcrumb and 
 -src/containers/Full -- 
 
-Breadcrumbs is a strapreact component that appears to be a way of setting up 'hot links' in the dynamic library
+Breadcrumbs is a strapreact component that appears to be a way of displaying a 'trail' on the webpage of menu items visited
 
 ----------------
 
