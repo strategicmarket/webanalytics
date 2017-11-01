@@ -82,18 +82,6 @@ module.exports = (env = {}) => {
             }
           ]
         },
-        /*
-        {
-          test: /\.svg$/,
-          use: [
-            {
-              // loader: 'url-loader'
-              loader: 'svg-url-loader',
-              options: { }
-            }
-          ]
-        },
-        */
         {
           test: /\.(png|jpg|svg)$/,
           loader: 'url-loader'

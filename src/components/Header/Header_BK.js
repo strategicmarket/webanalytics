@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import {
   Badge,
-  Button,
   Dropdown,
   DropdownMenu,
   DropdownItem,
@@ -63,34 +62,15 @@ class Header extends Component {
   }
 
   render() {
-    const { isAuthenticated, userHasScopes } = this.props.auth;
     return (
       <header className="app-header navbar">
         <NavbarToggler className="d-lg-none" onClick={this.mobileSidebarToggle}>&#9776;</NavbarToggler>
         <NavbarBrand href="#"></NavbarBrand>
         <NavbarToggler className="d-md-down-none" onClick={this.sidebarToggle}>&#9776;</NavbarToggler>
         <Nav className="d-md-down-none" navbar>
-        {
-              !isAuthenticated() && (
-                  <Button
-                    bsStyle="primary"
-                    className="btn-margin"
-                    onClick={this.login.bind(this)}
-                  >
-                    Log In
-                  </Button>
-                )
-            }
-            {
-              isAuthenticated() && (
-                  <Button
-                    bsStyle="primary"
-                    className="btn-margin"
-                  >
-                    Welcome
-                  </Button>
-                )
-            }
+          <NavItem className="px-3">
+            <NavLink href="#">Login</NavLink>
+          </NavItem>          
         </Nav>
         <Nav className="ml-auto" navbar>
           <NavItem className="d-md-down-none">
