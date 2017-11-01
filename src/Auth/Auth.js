@@ -31,10 +31,11 @@ export default class Auth {
 
 // refactor to direct to an error web page on error
   handleAuthentication() {
+    console.log("Entered handle authentication")
     this.auth0.parseHash((err, authResult) => {
       if (authResult && authResult.accessToken && authResult.idToken) {
         this.setSession(authResult);
-        history.replace('/');
+        history.replace('/dashboard');
       } else if (err) {
         history.replace('/');
         console.log(err);
