@@ -12,6 +12,7 @@ import Widgets from '../../views/Widgets/';
 
 // list and Create Contacts
 import Contacts from '../../views/Members/Contacts/';
+//import CreateContact from '../../views/Members/CreateContact/CreateContact.js';
 
 // Components
 import Buttons from '../../views/Components/Buttons/';
@@ -45,16 +46,11 @@ import Inbox from '../../views/UI-Kits/Email/Inbox/';
 import Message from '../../views/UI-Kits/Email/Message/';
 import Compose from '../../views/UI-Kits/Email/Compose/';
 
-// authentication
-import Auth from '../../Auth/Auth';
-
-const auth = new Auth();
-
 class Full extends Component {
   render() {
     return (
       <div className="app">
-        <Header auth={auth} {...this.props} />
+        <Header />
         <div className="app-body">
           <Sidebar {...this.props}/>
           <main className="main">
@@ -62,7 +58,7 @@ class Full extends Component {
             <Container fluid>
               <Switch>
                 <Route path="/dashboard" name="Dashboard" component={Dashboard}/>
-                <Route path="/members/contacts" name="Contacts" component={Contacts}/>
+                <Route path="/members/contacts" name="Contacts" component={Contacts}/>  
                 <Route path="/members/createcontacts" name="Contacts" component={Contacts}/>
                 <Route path="/components/buttons" name="Buttons" component={Buttons}/>
                 <Route path="/components/cards" name="Cards" component={Cards}/>

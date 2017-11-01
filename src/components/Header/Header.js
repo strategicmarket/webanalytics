@@ -23,6 +23,18 @@ class Header extends Component {
     };
   }
 
+  goTo(route) {
+    this.props.history.replace(`/${route}`)
+  }
+
+  login() {
+    this.props.auth.login();
+  }
+
+  logout() {
+    this.props.auth.logout();
+  }
+
   toggle() {
     this.setState({
       dropdownOpen: !this.state.dropdownOpen
@@ -57,14 +69,8 @@ class Header extends Component {
         <NavbarToggler className="d-md-down-none" onClick={this.sidebarToggle}>&#9776;</NavbarToggler>
         <Nav className="d-md-down-none" navbar>
           <NavItem className="px-3">
-            <NavLink href="#">Dashboard</NavLink>
-          </NavItem>
-          <NavItem className="px-3">
-            <NavLink href="#">Users</NavLink>
-          </NavItem>
-          <NavItem className="px-3">
-            <NavLink href="#">Settings</NavLink>
-          </NavItem>
+            <NavLink href="#">Login</NavLink>
+          </NavItem>          
         </Nav>
         <Nav className="ml-auto" navbar>
           <NavItem className="d-md-down-none">
