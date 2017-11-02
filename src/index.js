@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {BrowserRouter, Route, Switch} from 'react-router-dom';
+import {BrowserRouter, Route, Switch, Router} from 'react-router-dom';
 
 // Styles
 // Import Font Awesome Icons Set
@@ -14,6 +14,7 @@ import '../scss/core/_dropdown-menu-right.scss'
 
 // Containers
 import Full from './containers/Full/'
+import history from './Auth/history'
 
 // Views
 import Login from './views/Pages/Login/'
@@ -22,7 +23,7 @@ import Page404 from './views/Pages/Page404/'
 import Page500 from './views/Pages/Page500/'
 
 ReactDOM.render((
-  <BrowserRouter>
+  <Router history={history} component={Full}>
     <Switch>
       <Route exact path="/login" name="Login Page" component={Login}/>
       <Route exact path="/register" name="Register Page" component={Register}/>
@@ -30,5 +31,5 @@ ReactDOM.render((
       <Route exact path="/500" name="Page 500" component={Page500}/>
       <Route path="/" name="Home" component={Full}/>
     </Switch>
-  </BrowserRouter>
+  </Router>
 ), document.getElementById('root'));

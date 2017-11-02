@@ -73,7 +73,7 @@ class Header extends Component {
         {
               !isAuthenticated() && (
                   <Button
-                    bsStyle="primary"
+                    color="primary"
                     className="btn-margin"
                     onClick={this.login.bind(this)}
                   >
@@ -84,7 +84,7 @@ class Header extends Component {
             {
               isAuthenticated() && (
                   <Button
-                    bsStyle="primary"
+                    color="primary"
                     className="btn-margin"
                   >
                     Welcome
