@@ -5,7 +5,7 @@ export default {
     },
     {
       title: true,
-      name: 'Company Dashboard  '
+      name: 'Company Portal  '
     },
     {
       name: 'Analytics',
@@ -33,7 +33,7 @@ export default {
     },
     {
       title: true,
-      name: 'Developer Artifacts',
+      name: 'Developer Workbench',
       wrapper: {            // optional wrapper object
         element: 'span',      // required valid HTML5 element tag
         attributes: {}        // optional valid JS object with JS API naming ex: { className: "my-class", style: { fontFamily: "Verdana" }, id: "my-id"}
