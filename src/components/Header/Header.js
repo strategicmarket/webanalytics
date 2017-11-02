@@ -24,13 +24,6 @@ class Header extends Component {
     };
   }
 
-  goTo(route) {
-    this.props.history.replace(`/${route}`)
-  }
-
-  login() {
-    this.props.auth.login();
-  }
 
   logout() {
     this.props.auth.logout();
@@ -70,24 +63,15 @@ class Header extends Component {
         <NavbarBrand href="#"></NavbarBrand>
         <NavbarToggler className="d-md-down-none" onClick={this.sidebarToggle}>&#9776;</NavbarToggler>
         <Nav className="d-md-down-none" navbar>
-        {
-              !isAuthenticated() && (
-                  <Button
-                    color="primary"
-                    className="btn-margin"
-                    onClick={this.login.bind(this)}
-                  >
-                    Log In
-                  </Button>
-                )
-            }
+
             {
               isAuthenticated() && (
                   <Button
                     color="primary"
                     className="btn-margin"
+                    onClick={this.logout.bind(this)}
                   >
-                    Welcome
+                    Logout
                   </Button>
                 )
             }

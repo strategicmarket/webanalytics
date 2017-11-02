@@ -1,16 +1,17 @@
 import React, {Component} from "react";
-import {Container, Row, Col, CardGroup, Card, CardBlock, Button, Input, InputGroup, InputGroupAddon} from "reactstrap";
+import {Container, Row, Col, CardGroup,
+        Card, CardBlock, Button, Input,
+        InputGroup, InputGroupAddon} from "reactstrap";
 
 // authentication
-import Auth from '../../Auth/Auth';
-import Login from '../../views/Pages/Login/Login'
+import Auth from '../../../Auth/Auth';
 
 const auth = new Auth();
 
 class Login extends Component {
 
   login() {
-      this.props.auth.login();
+      auth.login();
     }
 
   render() {
@@ -26,7 +27,13 @@ class Login extends Component {
                     <p className="text-muted">To the Conversational Economy</p>
                     <Row>
                       <Col xs="6">
-                        <Button color="primary" className="px-4">Login  </Button>
+                        <Button
+                          color="primary"
+                          className="px-4"
+                          onClick={this.login.bind(this)}
+                          >
+                          Login
+                        </Button>
                       </Col>
                       <Col xs="6">
                         <Button color="primary" className="px-4">Message</Button>
