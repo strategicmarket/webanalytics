@@ -48,6 +48,7 @@ import Compose from '../../views/UI-Kits/Email/Compose/';
 // authentication
 import Auth from '../../Auth/Auth';
 import Callback from '../../Auth/Callback/Callback';
+import Login from '../../views/Pages/Login/Login'
 
 const auth = new Auth();
 
@@ -59,6 +60,13 @@ const handleAuthentication = (nextState, replace) => {
 }
 
 class Full extends Component {
+
+componentWillMount() {
+  console.log("AUTH VALUE")
+  console.log(auth.isAuthenticated())
+}
+
+
   render() {
     return (
       <div className="app">
@@ -94,7 +102,14 @@ class Full extends Component {
                 <Route path="/ui-kits/email/message" name="Message" component={Message}/>
                 <Route path="/ui-kits/email/compose" name="Compose" component={Compose}/>
                 <Route path="/callback" name="Callback" component={Callback}/>
-                
+                <Route path="/login" name="Login" component={Login}/>
+                <Route exact path="/" render={()=> (
+                    auth.isAuthenticated() ? (
+                      <Redirect to="/dashboard"/>
+                    ) : (
+                      <Redirect to="/login"/>
+                    )
+                  )}/>
               </Switch>
             </Container>
           </main>
