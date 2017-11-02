@@ -93,13 +93,8 @@ class Full extends Component {
                 <Route path="/ui-kits/email/inbox" name="Invoice" component={Inbox}/>
                 <Route path="/ui-kits/email/message" name="Message" component={Message}/>
                 <Route path="/ui-kits/email/compose" name="Compose" component={Compose}/>
-                <Route path="/callback" render={(props) => {
-                        console.log("CALLBACK")
-                        console.log(props)
-                        handleAuthentication(props);
-                        return <Callback {...props} />
-                  }}/>
-                <Redirect from="/" to="/dashboard"/>
+                <Route path="/callback" name="Callback" component={Callback}/>
+                
               </Switch>
             </Container>
           </main>
