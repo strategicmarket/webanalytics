@@ -15,39 +15,21 @@ import {
   DropdownToggle
 } from 'reactstrap';
 
+let isLoggedIn = true
 
-class Callback extends Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      loggedIn: false,
-      dropdownOpen: false
-    };
-  }
-
-
-  logout() {
+const handleLogout = history  => () => {
     //store.remove('loggedIn');
-    this.props.history.push('/login');
+    console.log("you have been logged out")
+    history.push('/login')
   }
+const Callback = ({history}) => {
+    console.log(history)
+    // testing workflow for auth
+    if (!isLoggedIn) return <Redirect to = '/login' />
 
-  render() {
-    if (!loggedIn) return <Redirect to="/login" />
 
-    return (
-      <div>
-        <h3>please be patient</h3>
-          <Button
-            color="primary"
-            className="btn-margin"
-            onClick={this.logout.bind(this)}
-          >
-            Logout
-          </Button>
-      </div>
-    );
-  }
+    return <Redirect to = '/secure'/>
 }
+
 
 export default Callback;

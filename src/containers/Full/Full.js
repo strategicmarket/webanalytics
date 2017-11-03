@@ -101,12 +101,7 @@ componentWillMount() {
                 <Route path="/ui-kits/email/inbox" name="Invoice" component={Inbox}/>
                 <Route path="/ui-kits/email/message" name="Message" component={Message}/>
                 <Route path="/ui-kits/email/compose" name="Compose" component={Compose}/>
-                <Route path="/callback" name="Callback" component={Callback}/>
-                <Route path="/login" name="Login" component={Login}/>
-                <Route path="/" render={()=> (
-                    auth.isAuthenticated() ?  ( <Redirect to="/dashboard"/> ) :
-                                              ( <Redirect to="/login"/> )
-                  )}/>
+
               </Switch>
             </Container>
           </main>

@@ -4,6 +4,7 @@ REFACTOR
 
 github project model
 https://github.com/searsaw/react-router-demo
+https://scotch.io/courses/using-react-router-4/authentication-with-redirect
 
 
 -----------------------------

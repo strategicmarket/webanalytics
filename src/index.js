@@ -25,7 +25,7 @@ import Page500 from './views/Pages/Page500/'
 
 // auth flow
 import Auth from './Auth/Auth';
-import Callback from './Auth/Callback/Callback';
+import Secure from './Auth/Callback/Secure';
 const auth = new Auth();
 
 const handleAuthentication = (nextState, replace) => {
@@ -43,10 +43,8 @@ ReactDOM.render((
       <Route exact path="/register" name="Register Page" component={Register}/>
       <Route exact path="/404" name="Page 404" component={Page404}/>
       <Route exact path="/500" name="Page 500" component={Page500}/>
-      <Route exact path="/callback" render={(props)=> (
-          <Redirect to="/"/>
-        )}/>      
-      <Route path="/" name="Home" component={Callback}/>
+      <Route path="/secure" name="Home" component={Full}/>
+      <Route path="/" name="Home" component={Secure}/>
 
     </Switch>
   </Router>
