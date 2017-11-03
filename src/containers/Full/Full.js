@@ -48,7 +48,7 @@ import Compose from '../../views/UI-Kits/Email/Compose/';
 // authentication
 import Auth from '../../Auth/Auth';
 import Callback from '../../Auth/Callback/Callback';
-import Login from '../../views/Pages/Login/Login'
+import Login from '../../views/Pages/LoginBK/Login'
 
 const auth = new Auth();
 
@@ -103,9 +103,8 @@ componentWillMount() {
                 <Route path="/ui-kits/email/compose" name="Compose" component={Compose}/>
                 <Route path="/callback" name="Callback" component={Callback}/>
                 <Route path="/login" name="Login" component={Login}/>
-                <Route exact path="/" render={()=> (
+                <Route path="/" render={()=> (
                     auth.isAuthenticated() ?  ( <Redirect to="/dashboard"/> ) :
-                    this.props.location.hash? (<Redirect to="/dashboard"/>) :
                                               ( <Redirect to="/login"/> )
                   )}/>
               </Switch>

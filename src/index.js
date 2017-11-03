@@ -18,13 +18,14 @@ import history from './Auth/history'
 
 // Views
 import Login from './views/Pages/Login/'
+import LoginBK from './views/Pages/LoginBK/'
 import Register from './views/Pages/Register/'
 import Page404 from './views/Pages/Page404/'
 import Page500 from './views/Pages/Page500/'
 
 // auth flow
 import Auth from './Auth/Auth';
-
+import Callback from './Auth/Callback/Callback';
 const auth = new Auth();
 
 const handleAuthentication = (nextState, replace) => {
@@ -36,7 +37,7 @@ const handleAuthentication = (nextState, replace) => {
 
 
 ReactDOM.render((
-  <Router history={history} component={Full}>
+    <Router history={history} >
     <Switch>
       <Route exact path="/login" name="Login Page" component={Login}/>
       <Route exact path="/register" name="Register Page" component={Register}/>
@@ -45,7 +46,9 @@ ReactDOM.render((
       <Route exact path="/callback" render={(props)=> (
           <Redirect to="/"/>
         )}/>
-      <Route exact path="/" name="Home" component={Full}/>
+      <Route path="/login" name="Login" component={Login}/>
+      <Route path="/" name="Home" component={Callback}/>
+
     </Switch>
   </Router>
 ), document.getElementById('root'));
