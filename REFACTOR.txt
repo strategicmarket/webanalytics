@@ -1,6 +1,23 @@
 
 REFACTOR
 
+
+github project model
+https://github.com/searsaw/react-router-demo
+
+
+-----------------------------
+
+<Router history={history} component={Full}>
+
+<Route path="/" name="Home" component={Full}/>
+
+<Route path="/login" name="Login" component={Login}/>
+
+
+
+-----------------------------------------
+
 const navLink = (item, idx) =>
      
  item.title ? title(item, idx) :

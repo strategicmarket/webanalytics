@@ -45,8 +45,7 @@ ReactDOM.render((
       <Route exact path="/500" name="Page 500" component={Page500}/>
       <Route exact path="/callback" render={(props)=> (
           <Redirect to="/"/>
-        )}/>
-      <Route path="/login" name="Login" component={Login}/>
+        )}/>      
       <Route path="/" name="Home" component={Callback}/>
 
     </Switch>

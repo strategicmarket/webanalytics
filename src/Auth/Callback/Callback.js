@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Route, Link, Switch, Redirect } from 'react-router-dom';
 import loading from './loading.svg';
 import {
   Badge,
@@ -20,6 +21,7 @@ class Callback extends Component {
     super(props);
 
     this.state = {
+      loggedIn: false,
       dropdownOpen: false
     };
   }
@@ -31,6 +33,7 @@ class Callback extends Component {
   }
 
   render() {
+    if (!loggedIn) return <Redirect to="/login" />
 
     return (
       <div>
