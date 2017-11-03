@@ -1,6 +1,11 @@
 
 REFACTOR
 
+
+detecting hash on reactjs client 
+
+https://stackoverflow.com/questions/29852998/getting-query-parameters-from-react-router-hash-fragment
+
 -------------------------------------------------
 
 index.js swapped out ...line 26
