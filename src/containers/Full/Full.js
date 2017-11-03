@@ -63,9 +63,9 @@ class Full extends Component {
 
 componentWillMount() {
   console.log("AUTH VALUE")
+  console.log(this.props)
   console.log(auth.isAuthenticated())
 }
-
 
   render() {
     return (
@@ -104,11 +104,9 @@ componentWillMount() {
                 <Route path="/callback" name="Callback" component={Callback}/>
                 <Route path="/login" name="Login" component={Login}/>
                 <Route exact path="/" render={()=> (
-                    auth.isAuthenticated() ? (
-                      <Redirect to="/dashboard"/>
-                    ) : (
-                      <Redirect to="/login"/>
-                    )
+                    auth.isAuthenticated() ?  ( <Redirect to="/dashboard"/> ) :
+                    this.props.location.hash? (<Redirect to="/dashboard"/>) :
+                                              ( <Redirect to="/login"/> )
                   )}/>
               </Switch>
             </Container>

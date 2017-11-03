@@ -44,11 +44,9 @@ class Login extends Component {
                 <Card className="text-white bg-primary py-5 d-md-down-none" style={{ width: 44 + '%' }}>
                   <CardBlock className="card-body text-center">
                     <div>
-                      <h2>Disrupt</h2>
-                      <p> Conversations managed. With every customer</p>
-                      <p> Brands. Sales. Products. Orders. Pricing. Status. </p>
-                      <p> Business in the conversational economy
-                      </p>
+                      <h2>Business Interactions</h2>
+                      <p> Develop. Govern. Operate</p>
+                      <p> Sales. Products. Orders. Fulfillment. Shipments. </p>                      
 
                     </div>
                   </CardBlock>

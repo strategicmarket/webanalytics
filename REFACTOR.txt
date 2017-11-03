@@ -1,7 +1,17 @@
 
 REFACTOR
 
+const navLink = (item, idx) =>
+     
+ item.title ? title(item, idx) :
+      
+item.divider ? divider(item, idx) :
+      
+item.children ? navDropdown(item, idx)
+                   
+	      : navItem(item, idx) ;
 
+------------------------------------------------
 detecting hash on reactjs client 
 
 https://stackoverflow.com/questions/29852998/getting-query-parameters-from-react-router-hash-fragment
