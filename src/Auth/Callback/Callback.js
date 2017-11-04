@@ -15,7 +15,7 @@ import {
   DropdownToggle
 } from 'reactstrap';
 
-let isLoggedIn = true
+let isLoggedIn = false
 
 const handleLogout = history  => () => {
     //store.remove('loggedIn');
