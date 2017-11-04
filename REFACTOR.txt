@@ -2,15 +2,6 @@
 REFACTOR
 
 
-  <Button
-            color="primary"
-            className="btn-margin"
-            onClick={this.handleClick}
-              >
-            Click
-        </Button>
-
-
 github project model
 https://github.com/searsaw/react-router-demo
 https://scotch.io/courses/using-react-router-4/authentication-with-redirect
