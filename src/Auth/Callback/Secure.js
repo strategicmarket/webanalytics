@@ -1,25 +1,59 @@
 import React, { Component } from 'react';
-import loading from './loading.svg';
+import {
+  Badge,
+  Button,
+  Dropdown,
+  DropdownMenu,
+  DropdownItem,
+  Nav,
+  NavItem,
+  NavLink,
+  NavbarToggler,
+  NavbarBrand,
+  DropdownToggle
+} from 'reactstrap'
 
 class Secure extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      username: '',
+      password: '',
+      error: false,
+    };
+    console.log("PROPS RECEIVED")
+    console.log(props)
+
+    this.handleClick = this.handleClick.bind(this);
+    this.props = props
+
+  }
+  handleClick() {
+    this.setState({ username: 'pat', password: 'secret'});
+    console.log("BUTTON CLICKED")
+    console.log(this.state)
+    console.log(this.props)
+    this.props.history.push('/secure')
+  }
 
   render() {
-    const style = {
-      position: 'absolute',
-      display: 'flex',
-      justifyContent: 'center',
-      height: '100vh',
-      width: '100vw',
-      top: 0,
-      bottom: 0,
-      left: 0,
-      right: 0,
-      backgroundColor: 'white',
-    }
+
     return (
-      <div style={style}>
-        <h2>Work in Progress</h2>
-      </div>
+      <header className="app-header navbar">
+
+        <Nav className="d-md-down-none" navbar>
+          <Button
+            color="primary"
+            className="btn-margin"
+            onClick={this.handleClick}
+
+          >
+            Click me
+          </Button>
+
+        </Nav>
+      </header>
     );
   }
 }
