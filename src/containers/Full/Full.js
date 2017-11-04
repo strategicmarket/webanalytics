@@ -77,7 +77,7 @@ componentWillMount() {
             <Breadcrumb />
             <Container fluid>
               <Switch>
-                <Route path="/dashboard" name="Dashboard" component={Dashboard}/>
+                <Route path="/secure/dashboard" name="Dashboard" component={Dashboard}/>
                 <Route path="/members/contacts" name="Contacts" component={Contacts}/>
                 <Route path="/members/createcontacts" name="Contacts" component={Contacts}/>
                 <Route path="/components/buttons" name="Buttons" component={Buttons}/>
