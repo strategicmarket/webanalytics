@@ -1,3 +1,15 @@
+
+
+/////////////////////////////////////////////////////
+///////        routing based on auth         ///////
+//////    note the public path '/' set in    //////
+//////  webpack config. This set access to   //////
+/////  menu options based on permissions     //////
+//////////////////////////////////////////////////
+
+// index/secure routes the <Full />  in containers - all apps
+// other index/ routes with limited micro app access will be added
+
 import React, { Component } from 'react';
 import {
   Badge,
@@ -12,6 +24,8 @@ import {
   NavbarBrand,
   DropdownToggle
 } from 'reactstrap'
+
+
 
 class Secure extends Component {
   constructor(props) {
@@ -34,7 +48,7 @@ class Secure extends Component {
     console.log("BUTTON CLICKED")
     console.log(this.state)
     console.log(this.props)
-    this.props.history.push('/login')
+    this.props.history.push('/secure')
   }
 
   render() {
