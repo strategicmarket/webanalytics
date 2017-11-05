@@ -1,6 +1,15 @@
 import React, { Component } from 'react';
 import { Navbar, Button, Nav } from 'reactstrap';
 import './App.css';
+import Auth from '../../Auth';
+
+const auth = new Auth();
+
+const handleAuthentication = (nextState, replace) => {
+  if (/access_token|id_token|error/.test(nextState.location.hash)) {
+    auth.handleAuthentication();
+  }
+}
 
 class App extends Component {
   goTo(route) {
@@ -13,6 +22,16 @@ class App extends Component {
 
   logout() {
     this.props.auth.logout();
+  }
+  componentWillMount(){
+
+        console.log("TESTING APP ON ENTRY")
+        console.log(this.props)
+
+        if (this.props.location.hash) {
+          handleAuthentication(this.props);
+          this.props.history.push('/secure')
+        }
   }
 
   render() {
