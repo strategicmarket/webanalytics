@@ -20,13 +20,13 @@ class App extends Component {
 
     return (
       <div>
-        <Navbar fluid>
+        <Navbar >
           <Navbar.Header>
             <Navbar.Brand>
               <a href="#">Auth0 - React</a>
             </Navbar.Brand>
             <Button
-              bsStyle="primary"
+              color="primary"
               className="btn-margin"
               onClick={this.goTo.bind(this, 'home')}
             >
@@ -35,7 +35,7 @@ class App extends Component {
             {
               !isAuthenticated() && (
                   <Button
-                    bsStyle="primary"
+                    color="primary"
                     className="btn-margin"
                     onClick={this.login.bind(this)}
                   >
@@ -46,7 +46,7 @@ class App extends Component {
             {
               isAuthenticated() && (
                   <Button
-                    bsStyle="primary"
+                    color="primary"
                     className="btn-margin"
                     onClick={this.goTo.bind(this, 'profile')}
                   >
@@ -57,7 +57,7 @@ class App extends Component {
             {
               isAuthenticated() && (
                   <Button
-                    bsStyle="primary"
+                    color="primary"
                     className="btn-margin"
                     onClick={this.goTo.bind(this, 'ping')}
                   >
@@ -68,7 +68,7 @@ class App extends Component {
             {
               isAuthenticated() &&  userHasScopes(['write:messages']) && (
                   <Button
-                    bsStyle="primary"
+                    color="primary"
                     className="btn-margin"
                     onClick={this.goTo.bind(this, 'admin')}
                   >
@@ -79,7 +79,7 @@ class App extends Component {
             {
               isAuthenticated() && (
                   <Button
-                    bsStyle="primary"
+                    color="primary"
                     className="btn-margin"
                     onClick={this.logout.bind(this)}
                   >
