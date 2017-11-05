@@ -29,11 +29,11 @@ class Ping extends Component {
           !isAuthenticated() &&
             <p>Log in to call a private (secured) server endpoint.</p>
         }
-        <Button bsStyle="primary" onClick={this.ping.bind(this)}>Ping</Button>
+        <Button color="primary" onClick={this.ping.bind(this)}>Ping</Button>
         {' '}
         {
           isAuthenticated() && (
-              <Button bsStyle="primary" onClick={this.securedPing.bind(this)}>
+              <Button color="primary" onClick={this.securedPing.bind(this)}>
                 Call Private
               </Button>
             )

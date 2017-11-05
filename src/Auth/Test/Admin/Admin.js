@@ -37,7 +37,7 @@ class Admin extends Component {
         <hr />
 
         <h3>Call an Admin endpoint</h3>
-        <Button bsStyle="primary" onClick={this.adminPing.bind(this)}>
+        <Button color="primary" onClick={this.adminPing.bind(this)}>
           Post a Message
         </Button>
         <h2>{message}</h2>
