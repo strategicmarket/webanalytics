@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Navbar, Button } from 'reactstrap';
+import { Navbar, Button, Nav } from 'reactstrap';
 import './App.css';
 
 class App extends Component {
@@ -20,11 +20,8 @@ class App extends Component {
 
     return (
       <div>
-        <Navbar >
-          <Navbar.Header>
-            <Navbar.Brand>
-              <a href="#">Auth0 - React</a>
-            </Navbar.Brand>
+        <Navbar color="faded" light >
+          <Nav className="d-md-down-none" navbar>
             <Button
               color="primary"
               className="btn-margin"
@@ -87,7 +84,7 @@ class App extends Component {
                   </Button>
                 )
             }
-          </Navbar.Header>
+          </Nav>
         </Navbar>
       </div>
     );
