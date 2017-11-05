@@ -34,7 +34,7 @@ class Secure extends Component {
     console.log("BUTTON CLICKED")
     console.log(this.state)
     console.log(this.props)
-    this.props.history.push('/secure')
+    this.props.history.push('/login')
   }
 
   render() {
