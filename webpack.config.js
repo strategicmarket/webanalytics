@@ -20,7 +20,7 @@ module.exports = (env = {}) => {
     },
     output: {
       path: BUILD_DIR,
-      filename: '[name].bundle.js',
+      filename: '[name].bundle.js'
       publicPath: '/'
     },
     // watch: true,

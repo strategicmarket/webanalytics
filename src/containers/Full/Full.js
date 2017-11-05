@@ -48,7 +48,7 @@ import Compose from '../../views/UI-Kits/Email/Compose/';
 // authentication
 import Auth from '../../Auth/Auth';
 import Callback from '../../Auth/Callback/Callback';
-import Login from '../../views/Pages/LoginBK/Login'
+import Login from '../../views/Pages/Login/Login'
 
 const auth = new Auth();
 

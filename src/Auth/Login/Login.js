@@ -1,10 +1,18 @@
+
+
+/////////////////////////////////////////////////////
+///////        splash page for login          ///////
+//////   routes to secure or open access      //////
+//////////////////////////////////////////////////
+
+
 import React, {Component} from "react";
 import {Container, Row, Col, CardGroup,
         Card, CardBlock, Button, Input,
         InputGroup, InputGroupAddon} from "reactstrap";
 
 // authentication
-import Auth from '../../../Auth/Auth';
+import Auth from '../Auth';
 
 const auth = new Auth();
 
@@ -46,7 +54,7 @@ class Login extends Component {
                     <div>
                       <h2>Business Interactions</h2>
                       <p> Develop. Govern. Operate</p>
-                      <p> Sales. Products. Orders. Fulfillment. Shipments. </p>                      
+                      <p> Sales. Products. Orders. Fulfillment. Shipments. </p>
 
                     </div>
                   </CardBlock>

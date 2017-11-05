@@ -89,7 +89,7 @@ export default class Auth {
     localStorage.removeItem('scopes');
     this.userProfile = null;
     // navigate to the home route
-    history.replace('/home');
+    history.replace('/');
   }
 
   isAuthenticated() {
