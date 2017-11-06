@@ -1,10 +1,8 @@
 
-
 /////////////////////////////////////////////////////
-///////        splash page for login          ///////
-//////   routes to secure or open access      //////
+///////        HOC for Login                  ///////
+//////   routes to Login Shield or Spinner    //////
 //////////////////////////////////////////////////
-
 
 import React, {Component} from "react";
 import {Container, Row, Col, CardGroup,
@@ -43,6 +41,7 @@ class Login extends Component {
 
       console.log("LOGIN TESTS")
       console.log(this.props)
+      console.log(this.state)
 
       if (this.props.location.hash) {
         console.log("LOGIN DETECTED HASH")

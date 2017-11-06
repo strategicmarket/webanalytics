@@ -1,8 +1,9 @@
 import React from "react";
 import {Container, Row, Col, CardGroup,
-        Card, CardBlock, Button, Input,
+        Card, CardBlock, CardHeader, Button, Input,
         InputGroup, InputGroupAddon} from "reactstrap";
 import Auth from '../Auth';
+import 'spinkit/css/spinkit.css';
 
 const auth = new Auth();
 const login = () => {
@@ -56,7 +57,21 @@ const Shield = (props) => {
 }
 
 const Spinner = (props) => {
-  return <h1>Start Spinning.</h1>;
+  return <div className="animated">
+    <Row>
+      <Col lg="4">
+        <Card>
+          <CardHeader>
+            <i className="fa fa-spinner"></i> Authenticating
+          </CardHeader>
+          <CardBlock className="card-body">
+            <div className="sk-rotating-plane"></div>
+          </CardBlock>
+        </Card>
+      </Col>
+
+    </Row>
+  </div>
 }
 
 const Register = (props) => {

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Redirect, Route, Router } from 'react-router-dom';
 import Login from './Auth/Login/Login';
+import Page404 from './Auth/404/Page404';
 import Full from './Containers/Full/Full';
 import Profile from './Auth/Test/Profile/Profile';
 import Admin from './Auth/Test/Admin/Admin';
@@ -30,9 +31,6 @@ export const authRoutes = () => {
           <Route path="/admin" render={(props) =>
               <Admin auth={auth} {...props} />
           } />
-          <Route exact path="/secure" render={(props) =>           
-              <Callback {...props} />
-          }/>
           <Route path="/" render={(props) => (
             !auth.isAuthenticated() ? (
               <Login auth={auth} cb={handleAuthentication} {...props}/>
@@ -40,6 +38,7 @@ export const authRoutes = () => {
               <Full auth={auth} {...props} />
             )
           )} />
+        <Route path='*' exact={true} component={Page404} />
 
         </div>
       </Router>
