@@ -1,5 +1,5 @@
 import React from 'react';
-import { Redirect, Route, Router } from 'react-router-dom';
+import { Redirect, Route, Router, Switch } from 'react-router-dom';
 import Login from './Auth/Login/Login';
 import Page404 from './Auth/404/Page404';
 import Full from './Containers/Full/Full';
@@ -25,6 +25,7 @@ export const authRoutes = () => {
   return (
     <Router history={history}>
         <div>
+          <Switch>
           <Route path="/guest" render={(props) =>
               <Guest auth={auth} {...props} />
           } />
@@ -38,8 +39,8 @@ export const authRoutes = () => {
               <Full auth={auth} {...props} />
             )
           )} />
-        <Route path='*' exact={true} component={Page404} />
-
+        <Route component={Page404} />
+        </Switch>
         </div>
       </Router>
   );
