@@ -18,8 +18,25 @@ const auth = new Auth();
 
 class Login extends Component {
 
+  const handleAuthentication = (nextState, replace) => {
+    if (/access_token|id_token|error/.test(nextState.location.hash)) {
+      auth.handleAuthentication();
+    }
+  }
+
   login() {
       auth.login();
+    }
+
+  componentWillMount(){
+
+      console.log("TESTING APP ON ENTRY")
+      console.log(this.props)
+
+      if (this.props.location.hash) {
+        handleAuthentication(this.props);
+          this.props.history.push('/secure')
+        }
     }
 
   render() {
@@ -40,11 +57,14 @@ class Login extends Component {
                           className="px-4"
                           onClick={this.login.bind(this)}
                           >
-                          Login
+                          Members
                         </Button>
                       </Col>
                       <Col xs="6">
-                        <Button color="primary" className="px-4">Message</Button>
+                        <Button color="primary" className="px-4"
+                          >
+                          Guests
+                        </Button>
                       </Col>
                     </Row>
                   </CardBlock>
