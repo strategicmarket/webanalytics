@@ -31,11 +31,8 @@ export default class Auth {
 
 // refactor to direct to an error web page on error
   handleAuthentication() {
-    console.log("Executing auth0 routine for handling");
     this.auth0.parseHash((err, authResult) => {
-      console.log("Executing auth0 routine for pure hash");
-      if (authResult && authResult.accessToken && authResult.idToken) {
-        console.log("Executing auth0 routine for setting session and history");
+      if (authResult && authResult.accessToken && authResult.idToken) {        
         this.setSession(authResult);
         history.replace('/');
       } else if (err) {

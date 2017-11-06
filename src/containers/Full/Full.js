@@ -44,21 +44,12 @@ import Invoice from '../../views/UI-Kits/Invoicing/';
 import Inbox from '../../views/UI-Kits/Email/Inbox/';
 import Message from '../../views/UI-Kits/Email/Message/';
 import Compose from '../../views/UI-Kits/Email/Compose/';
-
 // authentication
 import Auth from '../../Auth/Auth';
-import Callback from '../../Auth/Callback/Callback';
-import Login from '../../views/Pages/Login/Login'
 
 const auth = new Auth();
 
 class Full extends Component {
-
-componentWillMount() {
-  console.log("AUTH VALUE")
-  console.log(this.props)
-  console.log(auth.isAuthenticated())
-}
 
   render() {
     return (
