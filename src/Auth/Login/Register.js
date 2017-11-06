@@ -1,5 +1,5 @@
 import React from "react";
-import {Container, Row, Col, CardGroup,
+import {Container, Row, Col, CardGroup, CardTitle, CardText,
         Card, CardBlock, CardHeader, Button, Input,
         InputGroup, InputGroupAddon} from "reactstrap";
 import Auth from '../Auth';
@@ -57,6 +57,22 @@ const Shield = (props) => {
 }
 
 const Spinner = (props) => {
+  return <div className="app flex-row align-items-center">
+    <Container>
+      <Row className="justify-content-center">
+        <Col md="8">
+            <Card body inverse color="primary" >              
+              <div className="sk-rotating-plane"></div>
+            </Card>
+        </Col>
+      </Row>
+    </Container>
+  </div>
+}
+
+/*
+
+const Spinner = (props) => {
   return <div className="animated">
     <Row>
       <Col lg="4">
@@ -73,7 +89,7 @@ const Spinner = (props) => {
     </Row>
   </div>
 }
-
+*/
 const Register = (props) => {
      const isLoggingIn = props.status.isLoggingIn;
      if (!isLoggingIn) {
