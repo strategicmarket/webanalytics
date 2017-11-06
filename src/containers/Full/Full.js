@@ -52,13 +52,6 @@ import Login from '../../views/Pages/Login/Login'
 
 const auth = new Auth();
 
-
-const handleAuthentication = (nextState, replace) => {
-  if (/access_token|id_token|error/.test(nextState.location.hash)) {
-    auth.handleAuthentication();
-  }
-}
-
 class Full extends Component {
 
 componentWillMount() {
@@ -77,7 +70,7 @@ componentWillMount() {
             <Breadcrumb />
             <Container fluid>
               <Switch>
-                <Route path="/secure/dashboard" name="Dashboard" component={Dashboard}/>
+                <Route path="/dashboard" name="Dashboard" component={Dashboard}/>
                 <Route path="/members/contacts" name="Contacts" component={Contacts}/>
                 <Route path="/members/createcontacts" name="Contacts" component={Contacts}/>
                 <Route path="/components/buttons" name="Buttons" component={Buttons}/>
@@ -101,7 +94,7 @@ componentWillMount() {
                 <Route path="/ui-kits/email/inbox" name="Invoice" component={Inbox}/>
                 <Route path="/ui-kits/email/message" name="Message" component={Message}/>
                 <Route path="/ui-kits/email/compose" name="Compose" component={Compose}/>
-
+                <Redirect from="/" to="/dashboard"/>
               </Switch>
             </Container>
           </main>

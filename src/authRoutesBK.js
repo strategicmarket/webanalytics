@@ -44,7 +44,7 @@ export const authRoutes = () => {
               <Admin auth={auth} {...props} />
             )
           )} />
-          <Route path="/secure" render={(props) => {
+          <Route path="/secure" render={(props) => {              
             handleAuthentication(props);
             return <Callback {...props} />
           }}/>

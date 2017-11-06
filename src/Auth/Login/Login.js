@@ -16,13 +16,17 @@ import Auth from '../Auth';
 
 const auth = new Auth();
 
+
+const handleAuthentication = (nextState, replace) => {
+  console.log("DETECTED HASH - HANDLING AUTH")
+  console.log(nextState)
+  if (/access_token|id_token|error/.test(nextState.location.hash)) {
+    auth.handleAuthentication();
+  }
+}
+
 class Login extends Component {
 
-  const handleAuthentication = (nextState, replace) => {
-    if (/access_token|id_token|error/.test(nextState.location.hash)) {
-      auth.handleAuthentication();
-    }
-  }
 
   login() {
       auth.login();
@@ -30,12 +34,18 @@ class Login extends Component {
 
   componentWillMount(){
 
-      console.log("TESTING APP ON ENTRY")
+      console.log("LOGIN TESTS")
       console.log(this.props)
 
+      if (auth.isAuthenticated()) {
+        console.log("LOGIN DETECTED SIGNED IN ALREADY")
+        this.props.history.push('/secure')
+        }
+
       if (this.props.location.hash) {
-        handleAuthentication(this.props);
-          this.props.history.push('/secure')
+        console.log("LOGIN DETECTED HASH")
+        this.props.cb(this.props);
+        this.props.history.replace('/secure')
         }
     }
 

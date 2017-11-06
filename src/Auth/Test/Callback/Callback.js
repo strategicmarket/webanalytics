@@ -1,26 +1,29 @@
 import React, { Component } from 'react';
-import loading from './loading.svg';
+import {Row, Col, Card, CardHeader, CardBlock} from "reactstrap";
+
+import 'spinkit/css/spinkit.css';
 
 class Callback extends Component {
 
   render() {
-    const style = {
-      position: 'absolute',
-      display: 'flex',
-      justifyContent: 'center',
-      height: '100vh',
-      width: '100vw',
-      top: 0,
-      bottom: 0,
-      left: 0,
-      right: 0,
-      backgroundColor: 'white',
-    }
     return (
-      <div style={style}>
-        <h3>HELLO</h3>
+      <div className="animated">
+
+        <Row>
+          <Col lg="4">
+            <Card>
+              <CardHeader>
+                <i className="fa fa-spinner"></i> Authenticating
+              </CardHeader>
+              <CardBlock className="card-body">
+                <div className="sk-rotating-plane"></div>
+              </CardBlock>
+            </Card>
+          </Col>
+
+        </Row>
       </div>
-    );
+    )
   }
 }
 
