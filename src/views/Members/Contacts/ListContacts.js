@@ -9,7 +9,7 @@ import { Link }               from 'react-router-dom'
 import PropTypes              from 'prop-types'
 import escapeRegExp           from 'escape-string-regexp'
 import sortBy                 from 'sort-by'
-import config                 from '../../../../config/config'
+import config                 from '../../../../config'
 
 // refactor this -- need to handle this inside of url of css --
 // but having trouble with webpack loading 'url' in correct relative

@@ -8,7 +8,7 @@ import React, {Component} from 'react'
 import { Link }           from "react-router-dom"
 import ImageInput         from './ImageInput'
 import serializeForm      from 'form-serialize'
-import config             from '../../../../config/config'
+import config             from '../../../../config'
 import '../css/style.css'
 
 var image4 = config.origin + "/back.png"
