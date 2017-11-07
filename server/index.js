@@ -12,8 +12,8 @@ const app = express()
 
 // server components
 const server =      require('./http')(app);
-const config =      require('./config')
-const contacts =    require('./db/contacts')
+const config =      require('../config')
+const contacts =    require('../db/contacts')
 
 app.use(express.static('public'))
 app.use(cors())

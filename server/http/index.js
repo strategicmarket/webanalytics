@@ -1,12 +1,11 @@
 'use strict';
 
-
 //////////////////////////////////////////////////////////////////
 ////////////    Initialization Route for Server    //////////////
 //////////        Connect streams and server      //////////////
 ///////////////////////////////////////////////////////////////
 
-var config 	= 		require('../config');
+var config 	= 		require('../../config');
 var Redis =       require('ioredis');
 
 let port = config.redis.port;
