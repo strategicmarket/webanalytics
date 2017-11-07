@@ -25,16 +25,15 @@ var pub = new Redis({
 redis.on('message', function (channel, redisMsg) {
      console.log('Received  ' + channel + ' message: ' + redisMsg);
 
-     var parseMsg = JSON.parse(redisMsg)
-     var textMsg = parseMsg.text
-
-     var sendMsg = {}
-     sendMsg.date      = (new Date(message.date)).toLocaleString();
-     message.username  = parseMsg.name
-     message.content   = parseMsg.text
+     let parseMsg = JSON.parse(redisMsg)
+     let sendMsg = {}
+     
+     sendMsg.date      = (new Date()).toLocaleString()
+     sendMsg.username  = parseMsg.name
+     sendMsg.content   = parseMsg.text
 
     //socket.broadcast.to(roomId).emit('addMessage', textMsg);
-    socket.broadcast.to("dash").emit('addMessage', message);
+    socket.broadcast.to("dash").emit('addMessage', sendMsg);
    });
 
 // Exported function to initialize server
