@@ -27,12 +27,11 @@ background-image: url('../img/person-add.svg')
 
 -----------------------------------------
 
-2. work on members login -- really a test on the speed of development ---
-
-
-----------------------------
-
 3 testing reactjs with jest
 https://auth0.com/blog/testing-react-applications-with-jest/
 
 ---------------------------------
+
+4 add logic in authRoutes.js to serve 404 pages
+
+--------------------------------
