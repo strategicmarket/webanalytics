@@ -5,29 +5,30 @@
 //////////        Connect streams and server      //////////////
 ///////////////////////////////////////////////////////////////
 
-var config 	= 		require('../../config');
-var Redis =       require('ioredis');
+const config 	= 		require('../../config');
+const Redis =       require('ioredis');
 
 let port = config.redis.port;
 let host = config.redis.host;
 let password = config.redis.password;
 
-var redis = new Redis({
+let redis = new Redis({
    port: port,
    host: host
-
  });
-var pub = new Redis({
+let pub = new Redis({
    port: port,
    host: host
  })
 
+ let sendMsg = {}
+
+ // redis reacts to a message received on subscribed channel
 redis.on('message', function (channel, redisMsg) {
      console.log('Received  ' + channel + ' message: ' + redisMsg);
 
      let parseMsg = JSON.parse(redisMsg)
-     let sendMsg = {}
-     
+
      sendMsg.date      = (new Date()).toLocaleString()
      sendMsg.username  = parseMsg.name
      sendMsg.content   = parseMsg.text
@@ -40,6 +41,13 @@ redis.on('message', function (channel, redisMsg) {
 const init = function(app){
 
 	let server 	= 	require('http').Server(app);
+  let io = require('socket.io')(server)
+
+  // sockets acknowledge a connected user
+  io.on('connection', function(socket) {
+    console.log("a user connected")
+  })
+
   redis.subscribe('newMessage', function (err, count) {
 			console.log("Subscribed to " + count + " channel")
     });

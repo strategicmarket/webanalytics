@@ -5,6 +5,7 @@
 //////////////////////////////////////////////////
 
 const express =     require('express')
+const path =        require('path');
 const bodyParser =  require('body-parser')
 const cors =        require('cors')
 
@@ -15,7 +16,8 @@ const server =      require('./http')(app);
 const config =      require('../config')
 const contacts =    require('../db/contacts')
 
-app.use(express.static('public'))
+const htmlFile =        path.resolve(__dirname, '../public/index.html');
+const buildFolder =     path.resolve(__dirname, '../build');
 app.use(cors())
 
 //////////////////////////////////////////////////////////////////
@@ -51,9 +53,36 @@ const checkScopesAdmin = jwtAuthz([ 'write:messages' ]);
 
 /////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////
+(function() {
+
+  // Step 1: Create & configure a webpack compiler
+  let webpack = require('webpack');
+  let webpackConfig = require(process.env.WEBPACK_CONFIG ? process.env.WEBPACK_CONFIG : '../webpack.config');
+  let compiler = webpack(webpackConfig);
+  console.log("DEBUG >>>>>>>>>")
+  console.log(webpackConfig)
+  // Step 2: Attach the dev middleware to the compiler & the server
+  app.use(require("webpack-dev-middleware")(compiler, {
+    noInfo: true, publicPath: webpackConfig.output.publicPath
+  }));
+
+  // Step 3: Attach the hot middleware to the compiler & the server
+  app.use(require("webpack-hot-middleware")(compiler, {
+    log: console.log, path: '/__webpack_hmr', heartbeat: 10 * 1000
+  }));
+})();
+
+// serve index.html and build file
+
+app.use('/build', express.static(buildFolder))
+
+app.get("/", function(req, res) {
+  res.sendFile(htmlFile);
+});
+
 
 // help doc
-app.get('/', (req, res) => {
+app.get('/help', (req, res) => {
   const help = `
   <pre>
     MY APIs

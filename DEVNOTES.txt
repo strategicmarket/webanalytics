@@ -5,6 +5,13 @@ DEV NOTES
 --------------------------
 
 
+0 use case of streaming banter to a microapp -- built as a react component
+https://metricio.co/getting-started/
+
+
+---------------------------
+
+
 1. need to fix webpack loading of svg. Go to the views/members project and note that the svg images loaded via from url in css does not work. Webpack fails to compile the project with proper relative address
 
 Note this was suggested as potential solutions
