@@ -13,7 +13,7 @@ const app = express()
 
 // server components
 const server =      require('./http')(app);
-const config =      require('../config')
+const config =      require('./config')
 const contacts =    require('./db/contacts')
 
 const htmlFile =        path.resolve(__dirname, '../public/index.html');

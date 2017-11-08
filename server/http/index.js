@@ -5,7 +5,7 @@
 //////////        Connect streams and server      //////////////
 ///////////////////////////////////////////////////////////////
 
-const config 	= 		require('../../config');
+const config 	= 		require('../config');
 const Redis =       require('ioredis');
 
 let port = config.redis.port;

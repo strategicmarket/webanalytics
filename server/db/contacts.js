@@ -6,7 +6,7 @@
 ////////////////////////////////////////////////////////////////////////
 
 const clone = require('clone')
-const config = require('../../config/config')
+const config = require('../config')
 
 // unit test db
 const db = {}

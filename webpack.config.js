@@ -8,7 +8,7 @@ const extractCSS = new ExtractTextPlugin('[name].fonts.css');
 const extractSCSS = new ExtractTextPlugin('[name].styles.css');
 
 const BUILD_DIR = path.resolve(__dirname, 'build');
-const SRC_DIR = path.resolve(__dirname, 'src');
+const SRC_DIR = path.resolve(__dirname, 'client/src');
 
 module.exports = (env = {}) => {
   return {
@@ -101,11 +101,11 @@ module.exports = (env = {}) => {
       new HtmlWebpackPlugin(
         {
           inject: true,
-          template: './public/index.html'
+          template: './client/public/index.html'
         }
       ),
       new CopyWebpackPlugin([
-          {from: './public/img', to: 'img'}
+          {from: './client/public/img', to: 'img'}
         ],
         {copyUnmodified: false}
       )
