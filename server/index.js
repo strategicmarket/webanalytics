@@ -14,13 +14,14 @@ const app = express()
 // server components
 const server =      require('./http')(app);
 const config =      require('../config')
-const contacts =    require('../db/contacts')
+const contacts =    require('./db/contacts')
 
 const htmlFile =        path.resolve(__dirname, '../public/index.html');
 const buildFolder =     path.resolve(__dirname, '../build');
 app.use(cors());
 
-app.use(express.static('public'))
+// note that the relative path of public to the root must be determined since embedded in /server
+app.use(express.static(path.join(__dirname, 'public')))
 
 //////////////////////////////////////////////////////////////////
 ///////////     authentication fuctions           //////////////

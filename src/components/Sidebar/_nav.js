@@ -17,7 +17,7 @@ export default {
       }
     },
     {
-      name: 'Platform Registration',
+      name: 'Member Profiles',
       url: '/members',
       icon: 'icon-people',
       children: [
