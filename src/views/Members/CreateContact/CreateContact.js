@@ -11,16 +11,14 @@ import serializeForm      from 'form-serialize'
 import config             from '../../../../config'
 import '../css/style.css'
 
-var image4 = config.origin + "/back.png"
+var image4 = '../../../../img/back.png'
 
 class CreateContact extends Component {
 
   handleSubmit = (e) => {
     e.preventDefault()
-    console.log("SUBMIT FIRED")
     const values = serializeForm(e.target, {hash: true})
-    if (this.props.onCreateContact) {
-      console.log(this.props)
+    if (this.props.onCreateContact) {    
       this.props.onCreateContact(values)
     }
 
