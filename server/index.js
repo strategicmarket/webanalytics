@@ -20,6 +20,8 @@ const htmlFile =        path.resolve(__dirname, '../public/index.html');
 const buildFolder =     path.resolve(__dirname, '../build');
 app.use(cors());
 
+app.use(express.static('public'))
+
 //////////////////////////////////////////////////////////////////
 ///////////     authentication fuctions           //////////////
 //////////             auth0 saas                 //////////////
@@ -134,5 +136,4 @@ app.post('/api/admin', checkJwt, checkScopesAdmin, function(req, res) {
 // spin up http server
 server.listen(config.port, () => {
   console.log('Server listening on port %s, Ctrl+C to stop', config.port)
-  console.log(' ' + config.origin)
 })

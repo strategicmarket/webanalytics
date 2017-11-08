@@ -11,12 +11,11 @@ import escapeRegExp           from 'escape-string-regexp'
 import sortBy                 from 'sort-by'
 import config                 from '../../../../config'
 
-// refactor this -- need to handle this inside of url of css --
-// but having trouble with webpack loading 'url' in correct relative
-var image1 = config.origin + "/delete.png"
-var image2 = config.origin + "/search.png"
-var image3 = config.origin + "/person.png"
-
+// note that webpack copy puts all image files in the root folder image
+// static assets can be accessed at that relative address
+var image1 = '../../../../img/delete.png'
+var image2 = '../../../../img/search.png'
+var image3 = '../../../../img/person.png'
 
 class ListContacts extends Component {
 

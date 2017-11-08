@@ -18,19 +18,19 @@ const defaultData = {
       id: 'chatbot',
       name: 'Chatbot',
       email: 'chat@gmail.com',
-      avatarURL: config.origin + '/chatbot.jpg'
+      avatarURL: config.origin + '/img/chatbot.jpg'
     },
     {
       id: 'helpbot',
       name: 'Helpbot',
       email: 'help@gmail.com',
-      avatarURL: config.origin + '/helpbot.jpg'
+      avatarURL: config.origin + '/img/helpbot.jpg'
     },
     {
       id: 'smartbot',
       name: 'Smartbot',
       email: 'smart@gmail.com',
-      avatarURL: config.origin + '/smartbot.jpg'
+      avatarURL: config.origin + '/img/smartbot.jpg'
     }
   ]
 }
