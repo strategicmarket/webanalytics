@@ -19,7 +19,7 @@ module.exports = {
   output: {
       path: Paths.build,
       filename: "bundle.js",
-      publicPath: "/build/"
+      publicPath: "/"
   },
     // watch: true,
     module: {

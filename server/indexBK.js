@@ -16,7 +16,7 @@ const server =      require('./http')(app);
 const config =      require('../config')
 const contacts =    require('../db/contacts')
 
-const htmlFile =        path.resolve(__dirname, '../build/index.html');
+const htmlFile =        path.resolve(__dirname, '../public/index.html');
 const buildFolder =     path.resolve(__dirname, '../build');
 app.use(cors())
 
@@ -50,7 +50,7 @@ const checkJwt = jwt({
 
 const checkScopes = jwtAuthz([ 'read:messages' ]);
 const checkScopesAdmin = jwtAuthz([ 'write:messages' ]);
-/*
+
 /////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////
 (function() {
@@ -69,15 +69,10 @@ const checkScopesAdmin = jwtAuthz([ 'write:messages' ]);
     log: console.log, path: '/__webpack_hmr', heartbeat: 10 * 1000
   }));
 })();
-*/
 
 // serve index.html and build file
 
-app.use('/build', function(req, res){
-  console.log("Build detected")
-  console.log(req.url)
-  console.log(buildFolder)
-  express.static("/")})
+app.use('/build', express.static(buildFolder))
 
 app.get("/", function(req, res) {
   res.sendFile(htmlFile);
@@ -104,7 +99,7 @@ app.get('/help', (req, res) => {
 
   res.send(help)
 })
-/*
+
 // simple auth test
 app.use((req, res, next) => {
   const token = req.get('Authorization')
@@ -118,7 +113,7 @@ app.use((req, res, next) => {
     })
   }
 })
-*/
+
 
 // api catalogue
 app.get('/contacts', (req, res) => {

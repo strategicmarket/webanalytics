@@ -76,8 +76,14 @@
     "start": "npm-run-all --parallel server:start client:start",
     "client:start": "webpack-dev-server --progress --colors --inline --env.dev",
     "server:start": "node server.js",
-    "build": "webpack -p --progress --env.prod",
+    "build": "node node_modules/webpack/bin/webpack.js --colors --progress -p",
     "clean": "rimraf ./build"
+  },
+  "babel": {
+    "presets": [
+      "es2015",
+      "stage-2"
+    ]
   },
   "author": "xio",
   "license": "MIT",
