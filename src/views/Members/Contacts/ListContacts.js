@@ -9,7 +9,6 @@ import { Link }               from 'react-router-dom'
 import PropTypes              from 'prop-types'
 import escapeRegExp           from 'escape-string-regexp'
 import sortBy                 from 'sort-by'
-import config                 from '../../../../config'
 
 // note that webpack copy puts all image files in the root folder image
 // static assets can be accessed at that relative address
