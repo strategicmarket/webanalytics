@@ -16,12 +16,12 @@ const server =      require('./http')(app);
 const config =      require('../config')
 const contacts =    require('../db/contacts')
 
-const htmlFile =        path.resolve(__dirname, '../build/index.html');
+const htmlFile =        path.resolve(__dirname, '../public/index.html');
 const buildFolder =     path.resolve(__dirname, '../build');
-app.use(cors())
+app.use(cors());
 
 //////////////////////////////////////////////////////////////////
-////////////     authentication fuctions           //////////////
+///////////     authentication fuctions           //////////////
 //////////             auth0 saas                 //////////////
 ///////////////////////////////////////////////////////////////
 const jwt = require('express-jwt');
@@ -50,39 +50,16 @@ const checkJwt = jwt({
 
 const checkScopes = jwtAuthz([ 'read:messages' ]);
 const checkScopesAdmin = jwtAuthz([ 'write:messages' ]);
+
 /*
-/////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////
-(function() {
-
-  // Step 1: Create & configure a webpack compiler
-  let webpack = require('webpack');
-  let webpackConfig = require(process.env.WEBPACK_CONFIG ? process.env.WEBPACK_CONFIG : '../webpack.config');
-  let compiler = webpack(webpackConfig);
-  // Step 2: Attach the dev middleware to the compiler & the server
-  app.use(require("webpack-dev-middleware")(compiler, {
-    noInfo: true, publicPath: webpackConfig.output.publicPath
-  }));
-
-  // Step 3: Attach the hot middleware to the compiler & the server
-  app.use(require("webpack-hot-middleware")(compiler, {
-    log: console.log, path: '/__webpack_hmr', heartbeat: 10 * 1000
-  }));
-})();
-*/
-
 // serve index.html and build file
-
-app.use('/build', function(req, res){
-  console.log("Build detected")
-  console.log(req.url)
-  console.log(buildFolder)
-  express.static("/")})
-
+app.use(express.static("/public"))
+//app.use(express.static("/build"))
+app.use('/build', express.static(buildFolder))
 app.get("/", function(req, res) {
   res.sendFile(htmlFile);
 });
-
+*/
 
 // help doc
 app.get('/help', (req, res) => {
@@ -157,4 +134,5 @@ app.post('/api/admin', checkJwt, checkScopesAdmin, function(req, res) {
 // spin up http server
 server.listen(config.port, () => {
   console.log('Server listening on port %s, Ctrl+C to stop', config.port)
+  console.log(' ' + config.origin)
 })

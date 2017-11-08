@@ -6,29 +6,22 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 const extractCSS = new ExtractTextPlugin('[name].fonts.css');
 const extractSCSS = new ExtractTextPlugin('[name].styles.css');
+const Paths = {
+    src : path.join( __dirname, "src" ),
+    build : path.join( __dirname, "build" )
+  };
+const TARGET = process.env.BUILD_DEV || process.env.BUILD_PROD;
 
-const BUILD_DIR = path.resolve(__dirname, 'build');
-const SRC_DIR = path.resolve(__dirname, 'src');
-
-module.exports = (env = {}) => {
-  return {
-    entry: {
-      index: [SRC_DIR + '/index.js']
-    },
-    output: {
-      path: BUILD_DIR,
-      filename: '[name].bundle.js',
-      publicPath: '/'
-    },
+module.exports = {
+  entry: {
+    app: Paths.src + '/index.js'
+  },
+  output: {
+      path: Paths.build,
+      filename: "bundle.js",
+      publicPath: "/"
+  },
     // watch: true,
-    devtool: env.prod ? 'source-map' : 'cheap-module-eval-source-map',
-    devServer: {
-      contentBase: BUILD_DIR,
-      port: 3000,
-      compress: true,
-      hot: true,
-      open: true
-    },
     module: {
       rules: [
         {
@@ -94,21 +87,22 @@ module.exports = (env = {}) => {
     },
     plugins: [
       new webpack.HotModuleReplacementPlugin(),
-      new webpack.optimize.UglifyJsPlugin({sourceMap: true}),
+      //new webpack.optimize.UglifyJsPlugin({sourceMap: true}),
       new webpack.NamedModulesPlugin(),
       extractCSS,
       extractSCSS,
+      /*
       new HtmlWebpackPlugin(
         {
           inject: true,
           template: './public/index.html'
         }
       ),
+      */
       new CopyWebpackPlugin([
           {from: './public/img', to: 'img'}
         ],
         {copyUnmodified: false}
       )
     ]
-  }
-};
+  };

@@ -17,6 +17,7 @@ var image1 = config.origin + "/delete.png"
 var image2 = config.origin + "/search.png"
 var image3 = config.origin + "/person.png"
 
+
 class ListContacts extends Component {
 
   static propTypes = {
