@@ -36,6 +36,7 @@
     "body-parser": "^1.17.1",
     "clone": "^2.1.1",
     "cors": "^2.8.3",
+    "cross-env": "^5.0.5",
     "dotenv": "^4.0.0",
     "express": "^4.15.2",
     "express-jwt": "^5.3.0",
@@ -74,9 +75,9 @@
   },
   "scripts": {
     "start": "npm-run-all --parallel server:start client:start",
-    "client:start": "webpack-dev-server --progress --colors --inline --env.dev",
+    "client:start": "webpack-dev-server --config webpack/client.dev.js --progress --colors --inline --env.dev",
     "server:start": "node server.js",
-    "build": "node node_modules/webpack/bin/webpack.js --colors --progress -p",
+    "build": "cross-env NODE_ENV=production webpack --config webpack/client.prod.js --colors --progress",
     "clean": "rimraf ./build"
   },
   "babel": {
