@@ -41,12 +41,16 @@ redis.on('message', function (channel, redisMsg) {
 const init = function(app){
 
 	let server 	= 	require('http').Server(app);
-  let io = require('socket.io')(server)
+  let io =        require('socket.io')(server)
 
   // sockets acknowledge a connected user
   io.on('connection', function(socket) {
     console.log("a user connected")
-    socket.emit('message', {payload: 'hello banter'})
+    setInterval(function(){
+    console.log("mew message")
+    socket.emit('message', {payload: 'hello banter'});
+      }, 2000);
+
   })
 
   redis.subscribe('newMessage', function (err, count) {
