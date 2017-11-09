@@ -17,12 +17,11 @@ const toggleView = (view) => {
   console.log(view)
 }
 let socket = io.connect(API.api)
-console.log(">>>>>>>>>>>>>DEBUG<<<<<<<<<<<<")
-console.log(API.api)
 
 const stream = () => {
   socket.on('message', data => {
-    console.log('Message from server ' + API.api + "" + data.payload)
+    console.log(data)
+    console.log('Message from server ' + API.api + " " + data.username)
   })
 
 }

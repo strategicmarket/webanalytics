@@ -23,19 +23,7 @@ let pub = new Redis({
 
  let sendMsg = {}
 
- // redis reacts to a message received on subscribed channel
-redis.on('message', function (channel, redisMsg) {
-     console.log('Received  ' + channel + ' message: ' + redisMsg);
 
-     let parseMsg = JSON.parse(redisMsg)
-
-     sendMsg.date      = (new Date()).toLocaleString()
-     sendMsg.username  = parseMsg.name
-     sendMsg.content   = parseMsg.text
-
-    //socket.broadcast.to(roomId).emit('addMessage', textMsg);
-    socket.broadcast.to("dash").emit('addMessage', sendMsg);
-   });
 
 // Exported function to initialize server
 const init = function(app){
@@ -46,16 +34,25 @@ const init = function(app){
   // sockets acknowledge a connected user
   io.on('connection', function(socket) {
     console.log("a user connected")
-    setInterval(function(){
-    console.log("mew message")
-    socket.emit('message', {payload: 'hello banter'});
-      }, 2000);
+    // redis reacts to a message received on subscribed channel
+    redis.on('message', function (channel, redisMsg) {
+        console.log('Chaoticdash detected on  ' + channel + ' this message: ' + redisMsg);
 
+        let parseMsg = JSON.parse(redisMsg)
+        sendMsg.date      = (new Date()).toLocaleString()
+        sendMsg.username  = parseMsg.name
+        sendMsg.content   = parseMsg.text
+
+        socket.emit('message', sendMsg);
+    });
   })
 
-  redis.subscribe('newMessage', function (err, count) {
+  // dash1 channel be published to by chaoticbanter for testing
+  redis.subscribe('dash1', function (err, count) {
 			console.log("Subscribed to " + count + " channel")
     });
+
+
 
 	// The server object will be then used to listen to a port number
 	return server;
