@@ -14,10 +14,14 @@ import Auth from '../Auth';
 
 const auth = new Auth();
 
+// note the workflow for logging in with auth0 is multistep
+// isLoggingIn default is false and
+// in the first tick the login shield is presented
+//  second tick the component lifecycle notes the hash in the url and sets isLoggingIn to true
+// and the spinner is presented
+// auth0 callback is directed to the root '/' -- and authRoutes detects auth and routes to Full component
 
 const handleAuthentication = (nextState, replace) => {
-  console.log("DETECTED HASH - HANDLING AUTH")
-  console.log(nextState)
   if (/access_token|id_token|error/.test(nextState.location.hash)) {
     auth.handleAuthentication();
   }
@@ -39,12 +43,7 @@ class Login extends Component {
 
   componentWillMount(){
 
-      console.log("LOGIN TESTS")
-      console.log(this.props)
-      console.log(this.state)
-
       if (this.props.location.hash) {
-        console.log("LOGIN DETECTED HASH")
         this.props.cb(this.props);
         this.setState({isLoggingIn: true})
         }

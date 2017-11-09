@@ -9,7 +9,7 @@ export default {
     },
     {
       name: 'Analytics',
-      url: '/secure/dashboard',
+      url: '/dashboard',
       icon: 'icon-speedometer',
       badge: {
         variant: 'info',
@@ -17,7 +17,7 @@ export default {
       }
     },
     {
-      name: 'Member Profiles',
+      name: 'Profiles',
       url: '/members',
       icon: 'icon-people',
       children: [
@@ -25,6 +25,18 @@ export default {
           name: 'Agents',
           url: '/members/contacts',
           icon: 'icon-book-open'
+        }
+      ]
+    },
+    {
+      name: 'Streams',
+      url: '/streams',
+      icon: 'icon-fire',
+      children: [
+        {
+          name: 'Banter',
+          url: '/streams/banter',
+          icon: 'icon-bubble'
         }
       ]
     },

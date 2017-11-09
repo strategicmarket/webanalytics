@@ -54,16 +54,6 @@ const checkJwt = jwt({
 const checkScopes = jwtAuthz([ 'read:messages' ]);
 const checkScopesAdmin = jwtAuthz([ 'write:messages' ]);
 
-/*
-// serve index.html and build file
-app.use(express.static("/public"))
-//app.use(express.static("/build"))
-app.use('/build', express.static(buildFolder))
-app.get("/", function(req, res) {
-  res.sendFile(htmlFile);
-});
-*/
-
 // help doc
 app.get('/help', (req, res) => {
   const help = `
@@ -102,6 +92,7 @@ app.use((req, res, next) => {
 
 // api catalogue
 app.get('/contacts', (req, res) => {
+  console.log(">>>>>>>>>>>>RETRIEVING CONTACTS<<<<<<<<<<<<<<")
   res.send(contacts.get(req.token))
 })
 

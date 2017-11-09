@@ -13,6 +13,9 @@ import Widgets from '../../views/Widgets/';
 // list and Create Contacts
 import Contacts from '../../views/Members/Contacts/';
 
+// stream messages
+import Banter from '../../views/Streams/Banter/';
+
 // Components
 import Buttons from '../../views/Components/Buttons/';
 import Cards from '../../views/Components/Cards/';
@@ -64,6 +67,7 @@ class Full extends Component {
                 <Route path="/dashboard" name="Dashboard" component={Dashboard}/>
                 <Route path="/members/contacts" name="Contacts" component={Contacts}/>
                 <Route path="/members/createcontacts" name="Contacts" component={Contacts}/>
+                <Route path="/streams/banter" name="Banter" component={Banter}/>
                 <Route path="/components/buttons" name="Buttons" component={Buttons}/>
                 <Route path="/components/cards" name="Cards" component={Cards}/>
                 <Route path="/components/modals" name="Modals" component={Modals}/>

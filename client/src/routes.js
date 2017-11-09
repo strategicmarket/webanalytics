@@ -2,7 +2,7 @@ const routes = {
   '/': 'Home',
   '/dashboard': 'Dashboard',
   '/members': 'Members',
-  '/callback': 'Callback',
+  '/streams': 'Streams',
   '/components': 'Components',
   '/charts': 'Charts',
   '/components/buttons': 'Buttons',

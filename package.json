@@ -69,7 +69,8 @@
     "react-transition-group": "^1.2.0",
     "reactstrap": "^4.8.0",
     "simple-line-icons": "^2.4.1",
-    "socket.io": "1.4.4",
+    "socket.io": "^2.0.3",
+    "socket.io-client": "^2.0.3",
     "sort-by": "^1.2.0",
     "spinkit": "^1.2.5"
   },

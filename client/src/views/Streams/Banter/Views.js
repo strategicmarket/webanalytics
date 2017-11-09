@@ -2,15 +2,14 @@ import React from "react";
 import {Container, Row, Col, CardGroup, CardTitle, CardText,
         Card, CardBlock, CardHeader, Button, Input,
         InputGroup, InputGroupAddon} from "reactstrap";
-import Auth from '../Auth';
+
 import 'spinkit/css/spinkit.css';
 
-const auth = new Auth();
-const login = () => {
-  auth.login();
+const toggle = () => {
+  console.log("toggled just now")
 }
 
-const Shield = (props) => {
+const Feed = (props) => {
   return <div className="app flex-row align-items-center">
     <Container>
       <Row className="justify-content-center">
@@ -18,16 +17,16 @@ const Shield = (props) => {
           <CardGroup className="mb-0">
             <Card className="p-4">
               <CardBlock className="card-body">
-                <h1>Welcome</h1>
-                <p className="text-muted">To the Conversational Economy</p>
+                <h1>Banter Feed</h1>
+                <p className="text-muted">The Conversational Economy</p>
                 <Row>
                   <Col xs="6">
                     <Button
                       color="primary"
                       className="px-4"
-                      onClick={auth.login}
+                      onClick={toggle}
                       >
-                      Members
+                      Toggle
                     </Button>
                   </Col>
                   <Col xs="6">
@@ -42,9 +41,7 @@ const Shield = (props) => {
             <Card className="text-white bg-primary py-5 d-md-down-none" style={{ width: 44 + '%' }}>
               <CardBlock className="card-body text-center">
                 <div>
-                  <h2>Business Interactions</h2>
-                  <p> Develop. Govern. Operate</p>
-                  <p> Sales. Products. Orders. Fulfillment. Shipments. </p>
+                  <h2>Testing in Process</h2>
 
                 </div>
               </CardBlock>
@@ -56,13 +53,12 @@ const Shield = (props) => {
   </div>
 }
 
-const Spinner = (props) => {
+const Chart = (props) => {
   return <div className="app flex-row align-items-center">
     <Container>
       <Row className="justify-content-center">
         <Col md="8">
             <Card inverse color="primary" >
-              <div className="sk-rotating-plane"></div>
             </Card>
         </Col>
       </Row>
@@ -71,12 +67,12 @@ const Spinner = (props) => {
 }
 
 
-const Register = (props) => {
-     const isLoggingIn = props.status.isLoggingIn;
-     if (!isLoggingIn) {
-        return <Shield />;
+const Views = (props) => {
+     const state = props.view;
+     if (state.view === 'stream') {
+        return <Feed />;
      }
-        return <Spinner />;
+        return <Chart />;
 }
 
-export default Register;
+export default Views;

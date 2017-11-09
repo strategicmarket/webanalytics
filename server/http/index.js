@@ -46,6 +46,7 @@ const init = function(app){
   // sockets acknowledge a connected user
   io.on('connection', function(socket) {
     console.log("a user connected")
+    socket.emit('message', {payload: 'hello banter'})
   })
 
   redis.subscribe('newMessage', function (err, count) {

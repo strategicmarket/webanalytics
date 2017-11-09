@@ -8,7 +8,7 @@
 
 import React, { Component }   from 'react';
 import ListContacts           from './ListContacts';
-import * as ContactsAPI       from '../utils/ContactsAPI'
+import * as ContactsAPI       from '../../../utils/API'
 import CreateContact          from '../CreateContact/CreateContact'
 import { Route }              from 'react-router-dom'
 import '../css/style.css'
