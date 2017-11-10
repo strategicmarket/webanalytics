@@ -48,7 +48,7 @@ const init = function(app){
   })
 
   // dash1 channel be published to by chaoticbanter for testing
-  redis.subscribe('dash1', function (err, count) {
+  redis.subscribe('banter', function (err, count) {
 			console.log("Subscribed to " + count + " channel")
     });
 
