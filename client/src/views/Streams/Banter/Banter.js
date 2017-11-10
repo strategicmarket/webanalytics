@@ -16,7 +16,7 @@ const toggleView = (view) => {
   console.log("Toggle Banter View")
   console.log(view)
 }
-let socket = io.connect(API.api)
+//let socket = io.connect(API.api)
 
 const stream = () => {
   socket.on('message', data => {
@@ -32,22 +32,27 @@ class Banter extends Component {
     super(props);
 
     this.state = {
-      view: "stream"
+      response: false,
+      endpoint: API.api
     };
   }
-
-  componentWillMount(){
-
-      console.log("Banter Tests")
-      console.log(this.props)
-      console.log(this.state)
-      stream()
-
-}
+ componentDidMount(){
+   const { endpoint } = this.state;
+   const socket = io.connect(endpoint)
+   socket.on("message", data => this.setState({response: data}))
+ }
 
 render() {
+   const { response } = this.state;
+   const username = response.username
     return (
-      <Views view={this.state }/>
+      <div style={{ textAlign: "center" }}>
+      {response
+          ? <p>
+              message received: {username}
+            </p>
+          : <p>Loading...</p>}
+      </div>
     )
   }
 
