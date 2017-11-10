@@ -44,12 +44,15 @@ class Banter extends Component {
 
 render() {
    const { response } = this.state;
-   const username = response.username
+   let username = response.username
+   let content = response.content
+   let date = response.date
+
     return (
       <div style={{ textAlign: "center" }}>
       {response
           ? <p>
-              message received: {username}
+              message received: {username} texted {content} at {date}
             </p>
           : <p>Loading...</p>}
       </div>
