@@ -5,33 +5,6 @@ DEV NOTES
 --------------------------
 
 
-0 use case of streaming banter to a microapp -- built as a react component
-https://metricio.co/getting-started/
-
-
----------------------------
-
-
-1. need to fix webpack loading of svg. Go to the views/members project and note that the svg images loaded via from url in css does not work. Webpack fails to compile the project with proper relative address
-
-Note this was suggested as potential solutions
-https://www.npmjs.com/package/resolve-url-loader
-
-As a workaround -- 
-  
-> following code embedded in the reactjs apps
-
-var image1 = "http://localhost:5001/delete.png"
-style={{  backgroundImage: `url(${image1})`   }} 
-
-> images fetched from contactsrv -- not as fast as loading from local storage obviously
-
-> also note we are loading svg from members/contacts/img -- not png or jpg file -- with
-
-background-image: url('../img/person-add.svg')
-
-.... but unable to make it work with webpack
-
 -----------------------------------------
 
 3 testing reactjs with jest
@@ -42,3 +15,9 @@ https://auth0.com/blog/testing-react-applications-with-jest/
 4 add logic in authRoutes.js to serve 404 pages
 
 --------------------------------
+
+5 connect rest of banter app -- to track sales, traffic etc
+
+6. connect droid and watson -- watson could analyze messages for trigger words etc as well as forumalte responses
+
+

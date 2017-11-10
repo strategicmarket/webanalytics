@@ -48,3 +48,5 @@ Breadcrumbs is a strapreact component that appears to be a way of displaying a '
 8. auth0 is the JWT base secutiry framework -- can be sued to access permissions
 
 ----------------
+
+9. a rigid datamodel will help in the processing time -- proptypes might be required
