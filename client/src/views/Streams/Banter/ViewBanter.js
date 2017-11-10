@@ -431,13 +431,10 @@ class ViewBanter extends Component {
   render() {
     const { feed } = this.props
     const {name, text, date, avatarURL, flagURL } = this.props.data
-
+    console.log(feed)
 
     return (
       <div className="animated fadeIn">
-
-      <h3> Just heard from {name} </h3>
-
         <Row>
           <Col>
             <Card>
@@ -889,7 +886,7 @@ class ViewBanter extends Component {
                         </div>
                       </td>
                       <td>
-                        <div>message.name</div>
+                        <div>{message.name}</div>
                         <div className="small text-muted">
                           <span>New</span> | Registered: Jan 1, 2015
                         </div>
@@ -900,10 +897,7 @@ class ViewBanter extends Component {
                       <td>
                         <div className="clearfix">
                           <div className="float-left">
-                            <strong>50%</strong>
-                          </div>
-                          <div className="float-right">
-                            <small className="text-muted">Jun 11, 2015 - Jul 10, 2015</small>
+                            <strong>{message.text}</strong>
                           </div>
                         </div>
                         <Progress className="progress-xs" color="success" value="50"/>
