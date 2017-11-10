@@ -3,18 +3,19 @@
 
 MODEL PROJECT FOR DEV AND PRODUCTION
 
+USE chaoticsessions in testlab as the model
+
+See the github project --- for latest v3 webpack 
+
+---------------------------------
+
 uses reactjs, webpack, express
 https://github.com/tahnik/react-expressjs
 
-
+------------------
 
 blog stepping through another approach
 
 https://blog.hellojs.org/setting-up-your-react-es6-development-environment-with-webpack-express-and-babel-e2a53994ade
 
 
-
-
-----------------------------
-
-<script type="text/javascript" src="../build/bundle.js"></script>
