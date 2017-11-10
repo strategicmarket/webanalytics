@@ -10,7 +10,7 @@ import {Container, Row, Col, CardGroup,
         InputGroup, InputGroupAddon}    from "reactstrap";
 import * as API                         from '../../../utils/API'
 import io                               from "socket.io-client";
-import Views                            from "./views";
+import ViewBanter                       from "./ViewBanter";
 
 const toggleView = (view) => {
   console.log("Toggle Banter View")
@@ -51,9 +51,7 @@ render() {
     return (
       <div style={{ textAlign: "center" }}>
       {response
-          ? <p>
-              message received: {username} texted {content} at {date}
-            </p>
+          ? <ViewBanter data={response} />
           : <p>Loading...</p>}
       </div>
     )
