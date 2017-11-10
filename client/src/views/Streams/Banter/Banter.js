@@ -12,19 +12,8 @@ import * as API                         from '../../../utils/API'
 import io                               from "socket.io-client";
 import ViewBanter                       from "./ViewBanter";
 
-const toggleView = (view) => {
-  console.log("Toggle Banter View")
-  console.log(view)
-}
-//let socket = io.connect(API.api)
 
-const stream = () => {
-  socket.on('message', data => {
-    console.log(data)
-    console.log('Message from server ' + API.api + " " + data.username)
-  })
-
-}
+let endpoint = API.api
 
 class Banter extends Component {
 
@@ -32,26 +21,32 @@ class Banter extends Component {
     super(props);
 
     this.state = {
-      response: false,
-      endpoint: API.api
+      message: false,
+      feed: []
     };
   }
  componentDidMount(){
-   const { endpoint } = this.state;
    const socket = io.connect(endpoint)
-   socket.on("message", data => this.setState({response: data}))
+   socket.on("message", data => {
+     let feed = this.state.feed
+     feed.push(data)
+     if (feed.length > 9 ) {
+       feed.splice(0, 1)
+       this.setState({message: data, feed: feed})
+      }
+      else {
+       this.setState({message: data, feed: feed})
+    }
+  })
  }
 
 render() {
-   const { response } = this.state;
-   let username = response.username
-   let content = response.content
-   let date = response.date
+   const { message, feed } = this.state;
 
     return (
       <div style={{ textAlign: "center" }}>
-      {response
-          ? <ViewBanter data={response} />
+      {message
+          ? <ViewBanter data={message} feed={feed} />
           : <p>Loading...</p>}
       </div>
     )

@@ -40,8 +40,10 @@ const init = function(app){
 
         let parseMsg = JSON.parse(redisMsg)
         sendMsg.date      = (new Date()).toLocaleString()
-        sendMsg.username  = parseMsg.name
-        sendMsg.content   = parseMsg.text
+        sendMsg.name      = parseMsg.name
+        sendMsg.text      = parseMsg.text
+        sendMsg.flagURL   = parseMsg.flagURL
+        sendMsg.avatarURL = parseMsg.avatarURL
 
         socket.emit('message', sendMsg);
     });
