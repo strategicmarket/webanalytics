@@ -33,24 +33,24 @@ const init = function(app){
 
   // sockets acknowledge a connected user
   io.on('connection', function(socket) {
-    console.log("a user connected")
     // redis reacts to a message received on subscribed channel
     redis.on('message', function (channel, redisMsg) {
-        console.log('Chaoticdash detected on  ' + channel + ' this message: ' + redisMsg);
+        console.log('On  ' + channel + ' this message: ' + redisMsg);
 
-        let parseMsg = JSON.parse(redisMsg)
-        sendMsg.date      = (new Date()).toLocaleString()
-        sendMsg.name      = parseMsg.name
-        sendMsg.text      = parseMsg.text
-        sendMsg.flagURL   = parseMsg.flagURL
-        sendMsg.avatarURL = parseMsg.avatarURL
-
-        socket.emit('message', sendMsg);
+        if (channel === "watsonbanter") {
+            let parseMsg = JSON.parse(redisMsg)
+            sendMsg.date      = (new Date()).toLocaleString()
+            sendMsg.name      = parseMsg.name
+            sendMsg.text      = parseMsg.text
+            sendMsg.flagURL   = parseMsg.flagURL
+            sendMsg.avatarURL = parseMsg.avatarURL
+            socket.emit('banter', sendMsg);
+          }
     });
   })
 
   // dash1 channel be published to by chaoticbanter for testing
-  redis.subscribe('banter', function (err, count) {
+  redis.subscribe('watsonbanter', function (err, count) {
 			console.log("Subscribed to " + count + " channel")
     });
 
