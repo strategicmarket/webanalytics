@@ -7,6 +7,7 @@
 
 const config 	= 		require('../config');
 const Redis =       require('ioredis');
+const clone =       require('clone')
 
 let port = config.redis.port;
 let host = config.redis.host;
@@ -44,6 +45,13 @@ const init = function(app){
             sendMsg.text      = parseMsg.text
             sendMsg.flagURL   = parseMsg.flagURL
             sendMsg.avatarURL = parseMsg.avatarURL
+            sendMsg.reply     = parseMsg.reply
+            sendMsg.handle     = parseMsg.handle
+            sendMsg.sender     = parseMsg.sender
+            sendMsg.class     = parseMsg.class
+            sendMsg.state     = Object.assign({}, parseMsg.state)
+            sendMsg.classes   = clone(parseMsg.classes)
+
             socket.emit('banter', sendMsg);
           }
     });

@@ -79,12 +79,12 @@ class ViewBanter extends Component {
                       </td>
                       <td className="text-left">
                         <div className="float-left" style={{width: 400 + 'px'}}>
-                          {message.analysis}
+                          {message.reply}
                         </div>
                       </td>
                       <td>
                         <div className="small text-muted">
-                          {message.analysis}
+                          <span>{message.sender}</span> | {message.class} | {message.classes[0].confidence}                     
                         </div>
                       </td>
                     </tr>
