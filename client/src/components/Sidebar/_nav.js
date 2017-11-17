@@ -41,7 +41,7 @@ export default {
         {
           name: 'Product',
           url: '/streams/product',
-          icon: 'icon-bubble'
+          icon: 'icon-basket-loaded'
         }
       ]
     },

@@ -27,7 +27,7 @@ class Banter extends Component {
   }
  componentDidMount(){
    const socket = io.connect(endpoint)
-   socket.on("product", data => {
+   socket.on("banter", data => {
      let feed = this.state.feed
      feed.push(data)
      if (feed.length > 9 ) {
