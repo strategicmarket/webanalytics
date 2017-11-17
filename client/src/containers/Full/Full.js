@@ -15,6 +15,7 @@ import Contacts from '../../views/Members/Contacts/';
 
 // stream messages
 import Banter from '../../views/Streams/Banter/';
+import Product from '../../views/Streams/Product/';
 
 // Components
 import Buttons from '../../views/Components/Buttons/';
@@ -68,6 +69,7 @@ class Full extends Component {
                 <Route path="/members/contacts" name="Contacts" component={Contacts}/>
                 <Route path="/members/createcontacts" name="Contacts" component={Contacts}/>
                 <Route path="/streams/banter" name="Banter" component={Banter}/>
+                <Route path="/streams/product" name="Product" component={Product}/>
                 <Route path="/components/buttons" name="Buttons" component={Buttons}/>
                 <Route path="/components/cards" name="Cards" component={Cards}/>
                 <Route path="/components/modals" name="Modals" component={Modals}/>
