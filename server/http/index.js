@@ -54,11 +54,27 @@ const init = function(app){
 
             socket.emit('banter', sendMsg);
           }
+      if (channel === "watsonproduct") {
+            let parseMsg = JSON.parse(redisMsg)
+            sendMsg.date      = (new Date()).toLocaleString()
+            sendMsg.name      = parseMsg.name
+            sendMsg.text      = parseMsg.text
+            sendMsg.flagURL   = parseMsg.flagURL
+            sendMsg.avatarURL = parseMsg.avatarURL
+            sendMsg.reply     = parseMsg.reply
+            sendMsg.handle     = parseMsg.handle
+            sendMsg.sender     = parseMsg.sender
+            sendMsg.class     = parseMsg.class
+            sendMsg.state     = Object.assign({}, parseMsg.state)
+            sendMsg.classes   = clone(parseMsg.classes)
+
+            socket.emit('product', sendMsg);
+          }
     });
   })
 
   // dash1 channel be published to by chaoticbanter for testing
-  redis.subscribe('watsonbanter', function (err, count) {
+  redis.subscribe('watsonbanter', 'watsonproduct', function (err, count) {
 			console.log("Subscribed to " + count + " channel")
     });
 
