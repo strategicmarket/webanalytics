@@ -37,6 +37,11 @@ export default {
           name: 'Banter',
           url: '/streams/banter',
           icon: 'icon-bubble'
+        },
+        {
+          name: 'Product',
+          url: '/streams/product',
+          icon: 'icon-bubble'
         }
       ]
     },
