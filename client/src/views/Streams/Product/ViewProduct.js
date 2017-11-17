@@ -24,7 +24,7 @@ import {
 } from "reactstrap";
 
 
-class ViewBanter extends Component {
+class ViewProduct extends Component {
   constructor(props) {
     super(props);
 
@@ -84,7 +84,7 @@ class ViewBanter extends Component {
                       </td>
                       <td>
                         <div className="small text-muted">
-                          <span>{message.sender}</span> | {message.class} | {message.classes[0].confidence}                     
+                          <span>{message.sender}</span> | {message.class} | {message.classes[0].confidence}
                         </div>
                       </td>
                     </tr>
@@ -101,4 +101,4 @@ class ViewBanter extends Component {
   }
 }
 
-export default ViewBanter;
+export default ViewProduct;

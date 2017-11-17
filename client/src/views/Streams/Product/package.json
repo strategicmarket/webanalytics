@@ -2,5 +2,5 @@
   "name": "Banter",
   "version": "1.0.1",
   "private": true,
-  "main": "./Banter.js"
+  "main": "./Product.js"
 }

@@ -1,6 +1,6 @@
 
 //////////////////////////////////////////////////////
-///////        HOC for Banter Streams          ///////
+///////        HOC for Product Streams         ///////
 //////       routes to different views        //////
 //////////////////////////////////////////////////
 
@@ -10,7 +10,7 @@ import {Container, Row, Col, CardGroup,
         InputGroup, InputGroupAddon}    from "reactstrap";
 import * as API                         from '../../../utils/API'
 import io                               from "socket.io-client";
-import ViewBanter                       from "./ViewBanter";
+import ViewProduct                      from "./ViewProduct";
 
 
 let endpoint = API.api
@@ -27,7 +27,7 @@ class Banter extends Component {
   }
  componentDidMount(){
    const socket = io.connect(endpoint)
-   socket.on("banter", data => {
+   socket.on("product", data => {
      let feed = this.state.feed
      feed.push(data)
      if (feed.length > 9 ) {
@@ -46,7 +46,7 @@ render() {
     return (
       <div style={{ textAlign: "center" }}>
       {message
-          ? <ViewBanter data={message} feed={feed} />
+          ? <ViewProduct data={message} feed={feed} />
           : <p>Loading...</p>}
       </div>
     )
