@@ -46,8 +46,8 @@ import Spinners from '../../views/Plugins/Spinners/';
 // pages
 import Login from '../../views/Pages/Login/';
 import Register from '../../views/Pages/Register/';
-import Login from '../../views/Pages/Login/';
-import Login from '../../views/Pages/Login/';
+import Page404 from '../../views/Pages/Page404/';
+import Page500 from '../../views/Pages/Page500/';
 
 // UI Kits
 import Invoice from '../../views/UI-Kits/Invoicing/';
