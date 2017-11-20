@@ -45,6 +45,9 @@ import Spinners from '../../views/Plugins/Spinners/';
 
 // pages
 import Login from '../../views/Pages/Login/';
+import Register from '../../views/Pages/Register/';
+import Login from '../../views/Pages/Login/';
+import Login from '../../views/Pages/Login/';
 
 // UI Kits
 import Invoice from '../../views/UI-Kits/Invoicing/';
@@ -91,6 +94,9 @@ class Full extends Component {
                 <Route path="/widgets" name="Widgets" component={Widgets}/>
                 <Route path="/charts" name="Charts" component={Charts}/>
                 <Route path="/pages/login" name="Login" component={Login}/>
+                <Route path="/pages/register" name="Login" component={Register}/>
+                <Route path="/pages/404" name="Login" component={Page404}/>
+                <Route path="/pages/500" name="Login" component={Page500}/>
                 <Route path="/ui-kits/invoicing/invoice" name="Invoice" component={Invoice}/>
                 <Route path="/ui-kits/email/inbox" name="Invoice" component={Inbox}/>
                 <Route path="/ui-kits/email/message" name="Message" component={Message}/>
