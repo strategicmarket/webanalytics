@@ -43,6 +43,9 @@ import CodeEditors from '../../views/Editors/CodeEditors';
 import LoadingButtons from '../../views/Plugins/LoadingButtons/';
 import Spinners from '../../views/Plugins/Spinners/';
 
+// pages
+import Login from '../../views/Pages/Login/';
+
 // UI Kits
 import Invoice from '../../views/UI-Kits/Invoicing/';
 import Inbox from '../../views/UI-Kits/Email/Inbox/';
@@ -87,6 +90,7 @@ class Full extends Component {
                 <Route path="/plugins/spinners" name="Loading Buttons" component={Spinners}/>
                 <Route path="/widgets" name="Widgets" component={Widgets}/>
                 <Route path="/charts" name="Charts" component={Charts}/>
+                <Route path="/pages/login" name="Login" component={Login}/>
                 <Route path="/ui-kits/invoicing/invoice" name="Invoice" component={Invoice}/>
                 <Route path="/ui-kits/email/inbox" name="Invoice" component={Inbox}/>
                 <Route path="/ui-kits/email/message" name="Message" component={Message}/>

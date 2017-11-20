@@ -199,23 +199,23 @@ export default {
       children: [
         {
           name: 'Login',
-          url: '/login',
-          icon: 'icon-star'
+          url: '/pages/login',
+          icon: 'icon-login'
         },
         {
           name: 'Register',
-          url: '/register',
-          icon: 'icon-star'
+          url: '/pages/register',
+          icon: 'icon-screen-desktop'
         },
         {
           name: 'Error 404',
-          url: '/404',
-          icon: 'icon-star'
+          url: '/pages/404',
+          icon: 'icon-close'
         },
         {
           name: 'Error 500',
-          url: '/500',
-          icon: 'icon-star'
+          url: '/pages/500',
+          icon: 'icon-ghost'
         }
       ]
     },

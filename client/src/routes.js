@@ -26,6 +26,8 @@ const routes = {
   '/plugins/loading-buttons': 'Loading Buttons',
   '/plugins/spinners': 'Spinners',
   '/widgets': 'Widgets',
+  '/pages': 'Pages',
+  '/pages/login': 'Login',
   '/ui-kits': 'UI Kits',
   '/ui-kits/invoicing': 'Invoicing',
   '/ui-kits/invoicing/invoice': 'Invoice',
