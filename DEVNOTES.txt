@@ -5,6 +5,36 @@ DEV NOTES
 --------------------------
 
 
+react components
+
+paginate
+https://github.com/AdeleD/react-paginate
+
+spreadsheet component
+https://github.com/felixrieseberg/React-Spreadsheet-Component
+
+react multi-step - completing a form
+https://github.com/srdjan/react-multistep
+
+look at npm react-multistep
+
+also ,,,
+
+https://www.npmjs.com/package/react-stepzilla
+
+captcha
+https://github.com/dozoisch/react-google-recaptcha
+
+alerts
+https://www.npmjs.com/package/react-notifications
+https://xeodou.github.io/react-crouton/
+
+components for chat - including spotify
+https://github.com/Detaysoft/react-chat-elements
+
+soundcloud compoennt
+https://github.com/keske/react-soundcloud
+
 -----------------------------------------
 
 3 testing reactjs with jest
