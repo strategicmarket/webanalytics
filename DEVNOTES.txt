@@ -5,6 +5,14 @@ DEV NOTES
 --------------------------
 
 
+hoc components
+crm
+https://github.com/harryho/react-crm
+
+ecommerce
+https://github.com/cezerin/cezerin
+
+
 react components
 
 paginate
@@ -34,6 +42,12 @@ https://github.com/Detaysoft/react-chat-elements
 
 soundcloud compoennt
 https://github.com/keske/react-soundcloud
+
+components - see calendar button -- card
+https://github.com/stangaone1/reactjs-components
+
+more components  -- pretty cool - calendar
+https://zinoui.com/blog/react-calendar-component
 
 -----------------------------------------
 
