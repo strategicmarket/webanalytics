@@ -6,9 +6,6 @@ DEV NOTES
 react-final-form
 https://www.npmjs.com/package/react-final-form
 
-ecommerce
-https://github.com/cezerin/cezerin
-
 paginate
 https://github.com/AdeleD/react-paginate
 
