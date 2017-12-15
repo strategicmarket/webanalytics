@@ -4,6 +4,20 @@ DEV NOTES
 --------------------------
 
 
+pagination -- to thumb through messages on mogodb
+https://github.com/AdeleD/react-paginate
+
+-------------
+
+idea - post stuff to craigs list via sms
+https://github.com/forrestfiller/emerging-headwinds
+
+-------------
+
+redis text classify
+https://github.com/fatiherikli/klassify
+
+--------------
 redux form
 https://github.com/erikras/redux-form
 https://redux-form.com/7.2.0/
@@ -11,6 +25,12 @@ https://redux-form.com/7.2.0/
 json form
 https://mozilla-services.github.io/react-jsonschema-form/
 https://github.com/mozilla-services/react-jsonschema-form
+https://www.npmjs.com/package/react-jsonschema-form
+
+example forms -- download and run the example
+https://github.com/prometheusresearch/react-forms
+
+https://github.com/davezuko/react-reformed
 
 --------------------
 cardstack
