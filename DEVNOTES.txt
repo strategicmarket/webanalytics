@@ -3,15 +3,38 @@
 DEV NOTES
 --------------------------
 
-react-final-form
-https://www.npmjs.com/package/react-final-form
 
-paginate
-https://github.com/AdeleD/react-paginate
+redux form
+https://github.com/erikras/redux-form
+https://redux-form.com/7.2.0/
 
-sequencer
-https://www.npmjs.com/package/react-stepzilla
+json form
+https://mozilla-services.github.io/react-jsonschema-form/
+https://github.com/mozilla-services/react-jsonschema-form
 
+--------------------
+cardstack
+https://github.com/cameronbourke/react-cardstack
+flipcard
+https://github.com/mzabriskie/react-flipcard
+
+--------------
+very cool auth button
+https://identity.netlify.com/
+https://github.com/netlify/netlify-identity-widget
+https://www.netlify.com/blog/2017/09/07/introducing-built-in-identity-service-to-streamline-user-management/
+
+
+------------
+
+beautiful credit cards
+https://github.com/amarofashion/react-credit-cards
+
+----------
+payment card using storybook to display card
+https://github.com/pagarme/react-payment-card-component
+
+-------
 captcha
 https://github.com/dozoisch/react-google-recaptcha
 
