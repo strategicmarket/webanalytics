@@ -1,41 +1,22 @@
 
 
-
 DEV NOTES
 --------------------------
 
-
-hoc components
-crm
-https://github.com/harryho/react-crm
+react-final-form
+https://www.npmjs.com/package/react-final-form
 
 ecommerce
 https://github.com/cezerin/cezerin
 
-
-react components
-
 paginate
 https://github.com/AdeleD/react-paginate
 
-spreadsheet component
-https://github.com/felixrieseberg/React-Spreadsheet-Component
-
-react multi-step - completing a form
-https://github.com/srdjan/react-multistep
-
-look at npm react-multistep
-
-also ,,,
-
+sequencer
 https://www.npmjs.com/package/react-stepzilla
 
 captcha
 https://github.com/dozoisch/react-google-recaptcha
-
-alerts
-https://www.npmjs.com/package/react-notifications
-https://xeodou.github.io/react-crouton/
 
 components for chat - including spotify
 https://github.com/Detaysoft/react-chat-elements
@@ -61,7 +42,42 @@ https://auth0.com/blog/testing-react-applications-with-jest/
 --------------------------------
 
 5 connect rest of banter app -- to track sales, traffic etc
+----------------------------------
 
 6. connect droid and watson -- watson could analyze messages for trigger words etc as well as forumalte responses
 
+---------------------
+7 webpack refactor
 
+https://www.npmjs.com/package/babel-preset-env
+
+https://jaketrent.com/post/simplify-babel-setup-with-babel-preset-env/
+
+
+in .babelrc use
+
+{
+  "presets": [
+    ["env", {
+      "targets": {
+        "browsers": ["last 2 versions"]
+      }
+    }]
+  ]
+}
+
+---
+USE chaoticsessions in testlab as the model
+
+---------------------------------
+
+uses reactjs, webpack, express
+https://github.com/tahnik/react-expressjs
+
+------------------
+
+blog stepping through another approach
+
+https://blog.hellojs.org/setting-up-your-react-es6-development-environment-with-webpack-express-and-babel-e2a53994ade
+
+========================================
