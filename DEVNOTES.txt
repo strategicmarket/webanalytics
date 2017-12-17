@@ -1,38 +1,91 @@
 
 
+POTENTIAL 1st DEPLOYMENT is MERCYMOBILE
+
 DEV NOTES
 --------------------------
 
 
-pagination -- to thumb through messages on mogodb
+1. Webpage to display all messages in mongodb ---pagination -- to thumb through messages on mogodb
 https://github.com/AdeleD/react-paginate
 
 -------------
 
-idea - post stuff to craigs list via sms
+2. idea - post stuff to craigs list via sms -- this will require multi-step interaction
 https://github.com/forrestfiller/emerging-headwinds
 
 -------------
 
-redis text classify
+3 redis text classify?
 https://github.com/fatiherikli/klassify
 
 --------------
-redux form
-https://github.com/erikras/redux-form
-https://redux-form.com/7.2.0/
 
-json form
+4 . Registration page for new members -- json form+multistep+intercom widget -- all part of multitest.js
+
 https://mozilla-services.github.io/react-jsonschema-form/
 https://github.com/mozilla-services/react-jsonschema-form
 https://www.npmjs.com/package/react-jsonschema-form
 
-example forms -- download and run the example
+---------------
+5. example forms -- download and run the example
 https://github.com/prometheusresearch/react-forms
 
 https://github.com/davezuko/react-reformed
 
---------------------
+-----------------------
+
+6. testing reactjs with jest
+https://auth0.com/blog/testing-react-applications-with-jest/
+
+---------------------------------
+
+7.  add logic in authRoutes.js to serve 404 pages
+
+--------------------------------
+
+8. connect rest of banter app stream to chaoticdash to render track sales, page traffic etc
+----------------------------------
+
+9 webpack refactor  -- see sessionio and other notes in chaoticnotes/webpack
+
+https://www.npmjs.com/package/babel-preset-env
+
+https://jaketrent.com/post/simplify-babel-setup-with-babel-preset-env/
+
+
+in .babelrc use
+
+{
+  "presets": [
+    ["env", {
+      "targets": {
+        "browsers": ["last 2 versions"]
+      }
+    }]
+  ]
+}
+
+---
+USE chaoticsessions in testlab as the model
+
+---------------------------------
+
+uses reactjs, webpack, express
+https://github.com/tahnik/react-expressjs
+
+------------------
+
+blog stepping through another approach
+
+https://blog.hellojs.org/setting-up-your-react-es6-development-environment-with-webpack-express-and-babel-e2a53994ade
+
+========================================
+
+FUTURES -- items to explore
+
+
+-------------------
 cardstack
 https://github.com/cameronbourke/react-cardstack
 flipcard
@@ -71,53 +124,3 @@ more components  -- pretty cool - calendar
 https://zinoui.com/blog/react-calendar-component
 
 -----------------------------------------
-
-3 testing reactjs with jest
-https://auth0.com/blog/testing-react-applications-with-jest/
-
----------------------------------
-
-4 add logic in authRoutes.js to serve 404 pages
-
---------------------------------
-
-5 connect rest of banter app -- to track sales, traffic etc
-----------------------------------
-
-6. connect droid and watson -- watson could analyze messages for trigger words etc as well as forumalte responses
-
----------------------
-7 webpack refactor
-
-https://www.npmjs.com/package/babel-preset-env
-
-https://jaketrent.com/post/simplify-babel-setup-with-babel-preset-env/
-
-
-in .babelrc use
-
-{
-  "presets": [
-    ["env", {
-      "targets": {
-        "browsers": ["last 2 versions"]
-      }
-    }]
-  ]
-}
-
----
-USE chaoticsessions in testlab as the model
-
----------------------------------
-
-uses reactjs, webpack, express
-https://github.com/tahnik/react-expressjs
-
-------------------
-
-blog stepping through another approach
-
-https://blog.hellojs.org/setting-up-your-react-es6-development-environment-with-webpack-express-and-babel-e2a53994ade
-
-========================================
