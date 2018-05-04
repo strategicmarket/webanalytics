@@ -13,6 +13,7 @@ let port = config.redis.port;
 let host = config.redis.host;
 let password = config.redis.password;
 
+/*   COMMENT OUT REDIS FUNCTIONALITY
 let redis = new Redis({
    port: port,
    host: host
@@ -21,7 +22,7 @@ let pub = new Redis({
    port: port,
    host: host
  })
-
+*/
  let sendMsg = {}
 
 
@@ -30,6 +31,9 @@ let pub = new Redis({
 const init = function(app){
 
 	let server 	= 	require('http').Server(app);
+
+  ////////////// Comment out Redis Functionality //////////////
+  /*
   let io =        require('socket.io')(server)
 
   // sockets acknowledge a connected user
@@ -78,7 +82,7 @@ const init = function(app){
 			console.log("Subscribed to " + count + " channel")
     });
 
-
+    */
 
 	// The server object will be then used to listen to a port number
 	return server;

@@ -1,10 +1,12 @@
-import React from 'react';
+
+
+import React            from 'react';
 import { Redirect, Route, Router, Switch } from 'react-router-dom';
-import Login from './Auth/Login/Login';
-import Page404 from './Auth/404/Page404';
-import Full from './Containers/Full/Full';
-import Auth from './Auth/Auth';
-import history from './Auth/history';
+import Login            from './Auth/Login/Login';
+import Page404          from './Auth/404/Page404';
+import Full             from './Containers/Full/Full';
+import Auth             from './Auth/Auth';
+import history          from './Auth/history';
 
 const auth = new Auth();
 
