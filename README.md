@@ -24,7 +24,9 @@ This will start the webpack server for the frontend and nodejs for the db store 
 
 The code base is isomorphic, with key configuration data shared between client and server functions
 
-The configurations for REDIS is temporarily disabled (commented out in server/http )
+The configurations for REDIS is temporarily disabled (commented out in server/http ) -- so the streaming option on the sidebar will not work
+
+if the application opens with localhost:3000/dashboard -- go to the admin option and logout. This will render the 'login' page -- implemented as a demo with auth0 cloud service 
 
 ## License and Use
  [LICENSE](.github/LICENSE.txt).

@@ -5,7 +5,7 @@ export default {
     },
     {
       title: true,
-      name: 'Company Portal  '
+      name: 'Strategic Machines  '
     },
     {
       name: 'Analytics',
