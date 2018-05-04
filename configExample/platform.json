@@ -1,0 +1,25 @@
+[
+	{
+		"name": "xio",
+		"description": "Platform owner - test database holding client collections ",
+		"location": "urbancoder account",
+		"db": "machines",
+		"uri": "",
+		"username": "mongodb://localhost:27017/",
+		"password": "",
+		"webpassword": "demo",
+		"isLive": false
+	},
+	{
+		"name": "xio",
+		"description": "Platform owner - production db holding client collections",
+		"location": "urbancoder account",
+		"db": "machines",
+		"uri": "",
+		"username": "mongodb://localhost:27017/",
+		"password": "",
+		"webpassword": "demo",
+		"isLive": true
+	}
+
+]

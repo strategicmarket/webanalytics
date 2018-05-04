@@ -1,0 +1,63 @@
+{
+	"e200": {
+		"code": "200",
+		"message": "Intent detected. But no state machine found",
+		"description": "The intent of the parsed message was determined. But a corresponding state machine was not found",
+		"link": ""
+	},
+	"e300": {
+		"code": "300",
+		"message": "State Machine found. But no agent found",
+		"description": "State machines govern the sequence in which an agent's skills are executed. A corresponding agent was not found in db",
+		"link": ""
+	},
+	"e400": {
+		"code": "400",
+		"message": "Microservices error: application issue ",
+		"description": "Contact support. An application error was returned from serverless platform",
+		"link": ""
+	},
+	"e410": {
+		"code": "410",
+		"message": "Microservices error: response not returned ",
+		"description": "Contact support. No response received from serverless platform",
+		"link": ""
+	},
+	"e420": {
+		"code": "420",
+		"message": "Microservices error: http not valid ",
+		"description": "Contact support. Not a valid http uri for the agent skill",
+		"link": ""
+	},
+	"e900": {
+		"code": "900",
+		"message": "Fatal error in executing microservices (agent skills)",
+		"description": "Contact support. An attempt to access and execute a microservice failed",
+		"link": ""
+	},
+	"e910": {
+		"code": "910",
+		"message": "Fatal error in executing microservices (agent skills)",
+		"description": "Contact support. Agent configured with unknown skill type",
+		"link": ""
+	},
+	"e920": {
+		"code": "920",
+		"message": "Probable infinite loop detected with agent skill",
+		"description": "Contact support. An agent skill is repeatedly calling back interactions, exceeding defined threhold level ",
+		"link": ""
+	},
+	"e930": {
+		"code": "930",
+		"message": "Unexpected Platform Error - State Stage",
+		"description": "Contact support. An unexpected condition was encountered in the state stage process ",
+		"link": ""
+	},
+	"e940": {
+		"code": "940",
+		"message": "Potential loop or runaway state machine.",
+		"description": "Contact support. Machine iterations exceeded threshold set in config ",
+		"link": ""
+	}
+
+}

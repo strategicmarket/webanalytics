@@ -13,9 +13,12 @@ The UI is lightweight and built mostly around bootstrap
 
 Getting the app running on your local machine takes only a few steps:
 
-1. clone the project - `git clone https://github.com/pdhoward/chaoticdash.git
-2. install its dependencies - `npm install`
-3. start the app - npm run start
+1. rename the configexample directory to config. No additional keys are needed in config file beyond
+default settings already included in configExample. The redis capability has been disabled. The demo showing
+streaming analytics is not available with this repo
+2. clone the project - `git clone https://github.com/pdhoward/chaoticdash.git
+3. install its dependencies - `npm install`
+4. start the app - npm run start
 
 This will start the webpack server for the frontend and nodejs for the db store on the back end
 
