@@ -1,7 +1,7 @@
 
-## ChaoticDash
+## Strategic Machines Web Analytics
 
-A fullstack web application for managing a variety of key data stores for the xio messaging platform
+A fullstack web application for real time reporting across a variety of key data stores for messaging platform
 
 The portal to the conversational economy
 
@@ -21,11 +21,13 @@ This will start the webpack server for the frontend and nodejs for the db store 
 
 The code base is isomorphic, with key configuration data shared between client and server functions
 
+The configurations for REDIS is temporarily disabled (commented out in server/http )
+
 ## License and Use
  [LICENSE](.github/LICENSE.txt).
 
 ## Contributing
 
 For details, check out [CONTRIBUTING](.github/CONTRIBUTING.md).
-xio labs and affiliates
+Strategic Machines labs and affiliates
 connecting businesses with the conversational economy
