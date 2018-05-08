@@ -13,12 +13,9 @@ The UI is lightweight and built mostly around bootstrap
 
 Getting the app running on your local machine takes only a few steps:
 
-1. rename the configexample directory to config. No additional keys are needed in config file beyond
-default settings already included in configExample. The redis capability has been disabled. The demo showing
-streaming analytics is not available with this repo
-2. clone the project - `git clone https://github.com/pdhoward/chaoticdash.git
-3. install its dependencies - `npm install`
-4. start the app - npm run start
+1. clone the project - `git clone https://github.com/strategicmarket/webanalytics.git
+2. install its dependencies - `npm install`
+3. start the app - npm run start
 
 This will start the webpack server for the frontend and nodejs for the db store on the back end
 
@@ -26,7 +23,7 @@ The code base is isomorphic, with key configuration data shared between client a
 
 The configurations for REDIS is temporarily disabled (commented out in server/http ) -- so the streaming option on the sidebar will not work
 
-if the application opens with localhost:3000/dashboard -- go to the admin option and logout. This will render the 'login' page -- implemented as a demo with auth0 cloud service 
+if the application opens with localhost:3000/dashboard -- go to the admin option and logout. This will render the 'login' page -- implemented as a demo with auth0 cloud service
 
 ## License and Use
  [LICENSE](.github/LICENSE.txt).
